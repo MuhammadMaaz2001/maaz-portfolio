@@ -30,7 +30,7 @@ export default function ExperienceSection() {
 
   const experiences = [
     {
-      title: "React Developer",
+      title: "Frontend Developer",
       company: "BRB Group",
       period: "Nov 2024 - Present",
       type: "Full-time",

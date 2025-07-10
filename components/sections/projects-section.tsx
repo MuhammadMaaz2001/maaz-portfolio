@@ -46,7 +46,7 @@ export default function ProjectsSection() {
       description:
         "Meta Ads Campaign Dashboard is a dynamic web app to manage and track Meta ad campaigns. It organizes data by ad accounts and displays campaigns with real-time performance insights. Users can view metrics like impressions, reach, and clicks. The dashboard features smooth animations, progress bars, and a clean, responsive UI for a seamless experience.",
       tech: ["React", "Tailwindcss", "D3.js", "ReCharts"],
-      github: "https://github.com/maaz/task-manager",
+      github: "https://github.com/MuhammadMaaz2001/DashBoard-Meta/",
       demo: "https://dash-board-meta.vercel.app/",
       image: "images/thumbnail.png",
       featured: true,

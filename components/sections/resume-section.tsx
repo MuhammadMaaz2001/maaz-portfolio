@@ -87,7 +87,7 @@ practices, debugging, and a research-driven approach, I aim to deliver scalable 
                     <div className="space-y-3">
                       <div className="border-l-2 border-blue-200 dark:border-blue-800 pl-4">
                         <h5 className="font-semibold text-gray-900 dark:text-white text-sm">
-                          React Developer - BRB Group
+                          Frontend Developer - BRB Group
                         </h5>
                         <p className="text-xs text-gray-500 dark:text-gray-400">Nov 2024 - Present</p>
                         <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
