@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function ResumeSection() {
   const downloadCV = () => {
   const link = document.createElement("a");
-  link.href = "/Muhammad-Maaz-CV.pdf"; 
+  link.href = "/Muhammad Maaz-1.pdf "; 
   link.download = "Muhammad_Maaz_CV.pdf"; 
   document.body.appendChild(link);
   link.click();

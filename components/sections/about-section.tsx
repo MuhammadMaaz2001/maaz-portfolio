@@ -185,6 +185,14 @@ export default function AboutSection() {
 
   const certifications = [
     {
+      title: "Frontend Developer (React)",
+      provider: "Hacker Rank",
+      year: "2025",
+      icon: "/images/hackerrank_logo.jpg",
+      // color: "bg-blue-500",
+    },
+    
+    {
       title: "Project Management",
       provider: "Great Learning",
       year: "2024",
@@ -207,24 +215,24 @@ export default function AboutSection() {
     },
     {
       title: "Front-End Web UI Frameworks & Tools: Bootstrap 4",
-      provider: "Coursera",
+      provider: "The Honkong University of Science & Technology",
       year: "2023",
-      icon: "/images/coursera_logo.jpeg",
+      icon: "/images/hkust_logo.jpg",
       // color: "bg-purple-500",
     },
     
     {
       title: "React Js",
-      provider: "Coursera",
+      provider: "Meta",
       year: "2023",
-      icon: "/images/coursera_logo.jpeg",
+      icon: "/images/meta_logo.jpg",
       // color: "bg-cyan-500",
     },
     {
       title: "Python Basic & Python DSA",
-      provider: "Coursera",
+      provider: "University of Michigan",
       year: "2023",
-      icon: "/images/coursera_logo.jpeg",
+      icon: "/images/michigan_logo.jpg",
       // color: "bg-yellow-500",
     },
   ]
@@ -304,11 +312,11 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 relative z-10">
+       
         {/* Enhanced Education Section */}
         <div className="animate-on-scroll space-y-6" ref={educationRef}>
           {/* Section Header */}
-          <div className="relative mb-10">
+          {/* <div className="relative mb-10">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -327,171 +335,195 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-          </div>
+          </div> */}
 
           {/* Education Cards */}
-          <div className="space-y-6">
-            {education.map((edu, index) => (
-              <Card
-                key={index}
-                className="group bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-[1.02] overflow-hidden"
-              >
-                {/* Gradient Top Border */}
-                <div className="h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-                
-                <CardContent className="p-6 sm:p-8 relative">
-                  {/* Background Decoration */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-50 to-transparent dark:from-blue-900/20 rounded-bl-[100px] opacity-50"></div>
-                  
-                  <div className="flex flex-col sm:flex-row items-start gap-6 relative z-10">
-                    {/* Enhanced Logo */}
-                    <div className="relative flex-shrink-0">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-3xl blur-md group-hover:blur-lg transition-all duration-300"></div>
-                      <div className="relative bg-white dark:bg-slate-700 p-4 rounded-3xl shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-slate-200 dark:border-slate-600">
-                        <img
-                          src={edu.icon}
-                          alt={edu.institution}
-                          className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl object-contain"
-                        />
-                      </div>
-                      {/* Floating Sparkle */}
-                      <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:animate-bounce">
-                        <Sparkles className="w-3 h-3 text-white" />
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1 w-full">
-                      {/* Header Row */}
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-4">
-                        <div className="flex-1">
-                          <h4 className="font-bold text-xl sm:text-2xl text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
-                            {edu.degree}
-                          </h4>
-                        </div>
-                        <span className="inline-flex items-center text-sm bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full font-bold shadow-lg transform hover:scale-105 transition-all duration-300 whitespace-nowrap">
-                          {edu.type}
-                        </span>
-                      </div>
+          {/* Education Section - Timeline Style */}
+<div className="relative mb-20">
+  {/* Section Header */}
+  <div className="text-center mb-12">
+    <div className="inline-flex items-center gap-4 mb-4">
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full blur-xl opacity-60"></div>
+        <div className="relative bg-gradient-to-r from-emerald-500 to-teal-600 p-4 rounded-full shadow-2xl">
+          <GraduationCap className="h-8 w-8 text-white" />
+        </div>
+      </div>
+      <h3 className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
+        Educational Journey
+      </h3>
+    </div>
+    <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+      Academic milestones that shaped my technical foundation
+    </p>
+  </div>
 
-                      {/* Institution */}
-                      <div className="flex items-center text-blue-600 dark:text-blue-400 font-bold text-lg sm:text-xl mb-3">
-                        <MapPin className="w-5 h-5 mr-2 flex-shrink-0" />
-                        <span className="break-words">{edu.institution}</span>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 font-medium">
-                        {edu.description}
-                      </p>
-
-                      {/* Bottom Row */}
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
-                        <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <Calendar className="w-4 h-4 mr-2 flex-shrink-0" />
-                          <span className="font-semibold">{edu.year}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <Trophy className="w-4 h-4 mr-2 text-green-600 dark:text-green-400" />
-                          <span className="font-black text-green-700 dark:text-green-400 bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 px-4 py-2 rounded-full text-sm shadow-md">
-                            {edu.gpa}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Decorative Corner Elements */}
-                  <div className="absolute bottom-4 left-4 w-6 h-6 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-sm"></div>
-                  <div className="absolute top-6 right-6 w-4 h-4 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-sm"></div>
-                </CardContent>
-              </Card>
-            ))}
+  {/* Timeline Container */}
+  <div className="relative max-w-6xl mx-auto">
+    {/* Central Timeline Line */}
+    <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-emerald-400 via-teal-500 to-cyan-500 hidden lg:block"></div>
+    
+    {education.map((edu, index) => (
+      <div
+        key={index}
+        className={`relative flex items-center mb-16 lg:mb-20 ${
+          index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+        } flex-col lg:gap-16`}
+      >
+        {/* Timeline Node */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 z-20 hidden lg:block">
+          <div className="relative">
+            <div className="w-6 h-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full border-4 border-white dark:border-gray-900 shadow-xl"></div>
+            <div className="absolute inset-0 w-6 h-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full animate-ping opacity-30"></div>
           </div>
+        </div>
+
+        {/* Year Badge */}
+        <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:text-right lg:pr-8' : 'lg:text-left lg:pl-8'} mb-6 lg:mb-0`}>
+          <div className="inline-flex items-center bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 px-6 py-3 rounded-full border border-emerald-200 dark:border-emerald-700">
+            <Calendar className="w-5 h-5 mr-2 text-emerald-600" />
+            <span className="font-black text-2xl text-emerald-700 dark:text-emerald-400">{edu.year}</span>
+          </div>
+        </div>
+
+        {/* Education Card */}
+        <div className="lg:w-1/2 w-full">
+          <Card className="group bg-gradient-to-br from-white via-gray-50 to-white dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-2xl hover:shadow-3xl border-0 transform hover:-translate-y-4 hover:rotate-1 transition-all duration-700 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-transparent to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <CardContent className="p-8 relative">
+              {/* Floating Elements */}
+              <div className="absolute -top-2 -right-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-2 rounded-full animate-bounce">
+                  <Sparkles className="w-4 h-4 text-white" />
+                </div>
+              </div>
+
+              {/* Icon and Content */}
+              <div className="flex items-start gap-6">
+                <div className="relative flex-shrink-0">
+                  <div className="absolute inset-0 bg-emerald-200 dark:bg-emerald-800 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
+                  <div className="relative bg-white dark:bg-slate-600 p-4 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-500">
+                    <img
+                      src={edu.icon}
+                      alt={edu.institution}
+                      className="w-16 h-16 rounded-xl object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                      {edu.type}
+                    </span>
+                  </div>
+                  
+                  <h4 className="font-black text-xl text-gray-900 dark:text-white mb-2 group-hover:text-emerald-600 transition-colors">
+                    {edu.degree}
+                  </h4>
+                  
+                  <div className="flex items-center text-emerald-600 dark:text-emerald-400 font-bold mb-3">
+                    <MapPin className="w-4 h-4 mr-1" />
+                    <span>{edu.institution}</span>
+                  </div>
+                  
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                    {edu.description}
+                  </p>
+                  
+                  <div className="flex items-center">
+                    <Trophy className="w-4 h-4 text-amber-500 mr-2" />
+                    <span className="font-bold text-amber-600 dark:text-amber-400">{edu.gpa}</span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
         </div>
 
           {/* Enhanced Certifications Section */}
          <div className="animate-on-scroll space-y-6">
           {/* Section Header */}
-          <div className="relative mb-10">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-2xl shadow-2xl transform group-hover:scale-110 transition-all duration-300">
-                  <Award className="h-10 w-10 text-white" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text text-transparent">
-                  Certifications
-                </h3>
-                <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-                  <Trophy className="w-4 h-4 mr-2" />
-                  <span className="text-sm font-medium">Professional Recognition</span>
-                </div>
-              </div>
-            </div>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-          </div>
+          <div className="relative mb-10 text-center">
+  <div className="flex flex-col items-center gap-4 mb-6">
+    <div className="relative group">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="relative bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-2xl shadow-2xl transform group-hover:scale-110 transition-all duration-300">
+        <Award className="h-10 w-10 text-white" />
+      </div>
+    </div>
+    <div>
+      <h3 className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text text-transparent">
+        Certifications
+      </h3>
+      <div className="flex justify-center items-center mt-2 text-gray-600 dark:text-gray-400">
+        <Trophy className="w-4 h-4 mr-2" />
+        <span className="text-sm font-medium">Professional Recognition</span>
+      </div>
+    </div>
+  </div>
+  <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto"></div>
+</div>
+
 
           {/* Certification Cards */}
-          <div className="space-y-5">
-            {certifications.map((cert, index) => (
-              <Card
-                key={index}
-                className="group bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border-0 shadow-xl hover:shadow-2xl transition-all duration-600 transform hover:-translate-y-3 hover:scale-[1.02] overflow-hidden"
-              >
-                {/* Gradient Top Border */}
-                <div className="h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500"></div>
-                
-                <CardContent className="p-5 sm:p-6 relative">
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-transparent to-pink-50/50 dark:from-purple-900/10 dark:via-transparent dark:to-pink-900/10"></div>
-                  
-                  <div className="flex items-center gap-4 sm:gap-6 relative z-10">
-                    {/* Enhanced Certificate Icon */}
-                    <div className="relative flex-shrink-0">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-2xl blur-md group-hover:blur-lg transition-all duration-300"></div>
-                      <div className="relative bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 p-3 sm:p-4 rounded-2xl shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-all duration-400 border border-purple-200 dark:border-purple-700">
-                        <img
-                          src={cert.icon}
-                          alt={cert.title}
-                          className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-contain"
-                        />
-                      </div>
-                      
-                      {/* Achievement Badge */}
-                      <div className="absolute -top-1 -right-1 bg-gradient-to-r from-yellow-400 to-orange-500 p-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                        <Sparkles className="w-3 h-3 text-white" />
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-bold text-lg sm:text-xl text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300 leading-tight">
-                            {cert.title}
-                          </h4>
-                          <p className="text-purple-600 dark:text-purple-400 font-bold text-base sm:text-lg mt-1">
-                            {cert.provider}
-                          </p>
-                        </div>
-                        
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-gray-500" />
-                          <span className="text-sm font-bold text-gray-600 dark:text-gray-400 bg-gradient-to-r from-gray-100 to-slate-100 dark:from-gray-700 dark:to-slate-700 px-3 py-2 rounded-full border border-gray-200 dark:border-gray-600 whitespace-nowrap">
-                            {cert.year}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                 </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+          {/* Certification Cards */}
+<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {certifications.map((cert, index) => (
+    <Card
+  key={index}
+  className="group relative bg-white/90 dark:bg-slate-900/80 
+             backdrop-blur-xl rounded-2xl border border-gray-200/40 
+             dark:border-gray-700/40 shadow-md hover:shadow-xl 
+             transition-all duration-400 hover:-translate-y-2"
+>
+  {/* Subtle Top Accent Line */}
+  <div className="h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-t-2xl opacity-70"></div>
+
+  <CardContent className="p-6">
+    <div className="flex items-center gap-5">
+      {/* Icon with Gradient Accent */}
+      <div className="relative flex-shrink-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-300/30 to-pink-300/30 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        <div className="relative bg-gray-50 dark:bg-slate-800 p-3 rounded-xl shadow-md border border-gray-200 dark:border-gray-600">
+          <img
+            src={cert.icon}
+            alt={cert.title}
+            className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+          />
         </div>
+      </div>
+
+      {/* Certification Info */}
+      <div className="flex-1 min-w-0">
+        <h4 className="font-bold text-lg sm:text-xl text-gray-900 dark:text-white">
+          {cert.title}
+        </h4>
+        <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base mt-1">
+          {cert.provider}
+        </p>
+        <div className="flex items-center gap-2 mt-2">
+          <Calendar className="w-4 h-4 text-gray-500" />
+          <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
+            {cert.year}
+          </span>
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
+
+  ))}
+</div>
+
+          </div>
+        
       </div>
     </section>
   )
