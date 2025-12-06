@@ -30,33 +30,34 @@ export default function ExperienceSection() {
 
   const experiences = [
     {
-      title: "Frontend Developer",
-      company: "BRB Group",
+      title: "Nextjs & React Develoer",
+      company: "UTF-Labs",
       period: "Nov 2024 - Present",
       type: "Full-time",
-      icon: "/images/brb_developers_logo.jpeg",
+      icon: "/images/utf-labs.jpeg",
       // color: "from-blue-600 to-blue-800",
+      description:
+        "Worked as a full-stack Next.js & React Developer building scalable, high-performance, and SEO-optimized web applications using Next.js, React, TypeScript, PostgreSQL, and the MERN stack. Developed responsive UIs with Tailwind CSS, built and integrated RESTful APIs, managed databases (PostgreSQL & MongoDB), and collaborated closely with cross-functional teams to deliver efficient, user-focused solutions.",
+      achievements: [
+  "Built SEO-optimized and high-performance web applications using Next.js and React, improving page load speed by 30%.",
+  "Developed responsive and visually appealing UIs with Tailwind CSS, enhancing user engagement across devices.",
+  "Designed and integrated scalable backend APIs with MongoDB, ORM Prisma & ODM Mongoose ensuring smooth full-stack functionality."
+]
+
+    },
+    {
+      title: "React Development",
+      company: "BRB Group",
+      period: "Aug 2024 – Oct 2025",
+      type: "Contract",
+      icon: "/images/brb_developers_logo.jpeg",
+      // color: "from-green-600 to-green-800",
       description:
         "I led the frontend development of intuitive payroll, document, and finance management interfaces, streamlining workflows and enhancing data accuracy. I crafted a unified IT and inventory dashboard featuring ticketing, device monitoring, asset allocation, and automated hosting reminders. I also engineered the frontend for an AI-driven content automation tool that generates SEO-focused blog posts and schedules social media campaigns.",
       achievements: [
         "Improved workflow efficiency by 40%",
         "Led frontend development efforts while collaborating cross-functionally with design and backend teams to deliver high-quality user interfaces.",
         "Implemented AI-driven automation tools",
-      ],
-    },
-    {
-      title: "React Development",
-      company: "BRB Group",
-      period: "Aug 2024 – Sep 2024",
-      type: "Contract",
-      icon: "/images/brb_developers_logo.jpeg",
-      // color: "from-green-600 to-green-800",
-      description:
-        "Assisted in front-end development with a focus on UI/UX, API integration, and Git. Collaborated with cross-functional teams to streamline data handling and improve user experience.",
-      achievements: [
-        "Enhanced API integration performance",
-        "Improved user experience metrics",
-        "Streamlined development workflow",
       ],
     },
     {

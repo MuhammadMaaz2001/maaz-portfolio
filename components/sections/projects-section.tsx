@@ -112,6 +112,51 @@ export default function ProjectsSection() {
       image: "/images/filemanagement.png",
       featured: false,
     },
+    {
+      title: "Url Shortener Nextjs",
+      description:
+        "A modern and fully functional URL Shortener built with Next.js App Router, Tailwind CSS, and SQLite (via Prisma).",
+      tech: ["Next,js", "Prisma", "SQLite ", "Prisma"],
+      github: "https://github.com/MuhammadMaaz2001/url-shortener-nextjs",
+      image: "/images/url-short.png",
+      featured: false,
+    },
+    {
+      title: "Pokemon Team Builder",
+      description:
+        "A mini web application that allows users to search for Pokémon using the PokéAPI and build their own custom teams. Built with React, TypeScript, and TailwindCSS , responsive user experience.",
+      tech: ["React", "Tailwindcss", "PokemonAPi"],
+      github: "https://github.com/MuhammadMaaz2001/assignment-pokemon",
+      demo: "https://assignment-pokemon-three.vercel.app/",
+      // image: "images/.png",
+      featured: true,
+    },
+     {
+      title: "Guess management backend",
+      description:
+        "A backned for manging visitor for day to day task.",
+      tech: ["Express", "Node.js", "MongoDB", ],
+      github: "https://github.com/MuhammadMaaz2001/guestManagementBackend",
+      // image: "/images/filemanagement.png",
+      featured: false,
+    },
+    {
+      title: "Chat App backend",
+      description:
+        "A backned for Real Time Chat Application.",
+      tech: ["Express", "Node.js", "MongoDB", "Socket"],
+      github: "https://github.com/MuhammadMaaz2001/chat-app-backend",
+      // image: "/images/filemanagement.png",
+      featured: false,
+    },
+     {
+    title: "E-Commerce Platform",
+    description: "A full-stack e-commerce solution... frontend repo",
+    tech: ["React", "Node.js", "MongoDB", "Redux"],
+    github: "https://github.com/MuhammadMaaz2001/frontend-ecommerce",
+    image: "/images/E-commerce.jpg", // Make sure this path is correct
+    featured: true,
+  },
     // {
     //   title: "Learning Management System",
     //   description:

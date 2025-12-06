@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function ResumeSection() {
   const downloadCV = () => {
   const link = document.createElement("a");
-  link.href = "/Muhammad Maaz-1.pdf "; 
+  link.href = "/Muhammad Maaz-SWE.pdf "; 
   link.download = "Muhammad_Maaz_CV.pdf"; 
   document.body.appendChild(link);
   link.click();
@@ -70,11 +70,7 @@ export default function ResumeSection() {
                       Professional Summary
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                      A dedicated and detail-oriented Frontend Developer with strong command over modern JavaScript frameworks 
-including React, Vue3, and SvelteKit. I specialize in building responsive UI/UX designs and integrating APIs, with 
-working knowledge of backend technologies like Node.js, Express, and Python’s FastAPI. I am well-versed in SDLC, 
-Agile & SCRUM methodologies, and tools like JIRA and Git. Known for cross-functional collaboration, clean code 
-practices, debugging, and a research-driven approach, I aim to deliver scalable and efficient web applications.
+              A detail-oriented Full Stack Developer skilled in Next.js full-stack, React, Vue3, SvelteKit, and the MERN stack. I build responsive, SEO-friendly UIs, integrate APIs, and develop scalable backend services using Node.js, Express, Prisma, Mongoose, and FastAPI. Experienced in database design, SDLC, Agile & SCRUM, and tools like JIRA and Git. Known for clean code, debugging, and collaborative problem-solving to deliver high-performance, maintainable web applications.
                     </p>
                   </div>
 
@@ -87,18 +83,19 @@ practices, debugging, and a research-driven approach, I aim to deliver scalable 
                     <div className="space-y-3">
                       <div className="border-l-2 border-blue-200 dark:border-blue-800 pl-4">
                         <h5 className="font-semibold text-gray-900 dark:text-white text-sm">
-                          Frontend Developer - BRB Group
+                          Nextjs & React Develoer - UTF-Labs
                         </h5>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Nov 2024 - Present</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Oct 2025 - Present</p>
                         <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                          Led frontend development of payroll and finance management interfaces...
+                          Worked as a full-stack Next.js & React Developer building scalable,high...
                         </p>
                       </div>
                       <div className="border-l-2 border-gray-200 dark:border-gray-700 pl-4">
                         <h5 className="font-semibold text-gray-900 dark:text-white text-sm">
-                          Frontend Developer - Neuramatics.Co.
+                          React Developer -  BRB Group
+                          
                         </h5>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Nov 2023 - Feb 2024</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Aug 2024 - Oct 2025</p>
                       </div>
                     </div>
                   </div>
