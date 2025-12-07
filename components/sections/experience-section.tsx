@@ -32,7 +32,7 @@ export default function ExperienceSection() {
     {
       title: "Nextjs & React Develoer",
       company: "UTF-Labs",
-      period: "Nov 2024 - Present",
+      period: "Oct 2025 - Present",
       type: "Full-time",
       icon: "/images/utf-labs.jpeg",
       // color: "from-blue-600 to-blue-800",
