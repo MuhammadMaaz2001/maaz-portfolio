@@ -83,19 +83,19 @@ export default function ResumeSection() {
                     <div className="space-y-3">
                       <div className="border-l-2 border-blue-200 dark:border-blue-800 pl-4">
                         <h5 className="font-semibold text-gray-900 dark:text-white text-sm">
-                          Nextjs & React Develoer - UTF-Labs
+                        BricketX PK
                         </h5>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Oct 2025 - Present</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">April 2026 - Present</p>
                         <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                          Worked as a full-stack Next.js & React Developer building scalable,high...
+                          Worked as a full-stack developer (MERN | NEXT.js)  building scalable,high...
                         </p>
                       </div>
                       <div className="border-l-2 border-gray-200 dark:border-gray-700 pl-4">
                         <h5 className="font-semibold text-gray-900 dark:text-white text-sm">
-                          React Developer -  BRB Group
+                          Nextjs & React Develoer - UTF-Labs
                           
                         </h5>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Aug 2024 - Oct 2025</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Oct 2025 - April 2026</p>
                       </div>
                     </div>
                   </div>

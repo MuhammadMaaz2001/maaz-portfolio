@@ -29,10 +29,30 @@ export default function ExperienceSection() {
   }, [])
 
   const experiences = [
+    
+    
     {
-      title: "Nextjs & React Develoer",
+      title: "Full Stack Developer (MERN | Next.js)",
+      company: "BricketX PK",
+      period: "April 2026 - Present",
+      type: "Full-time",
+      icon: "/images/bricketx_investments_logo.jpeg",
+      // color: "from-blue-600 to-blue-800",
+   description:
+    "Worked as a Full Stack Developer building scalable, high-performance, and SEO-optimized web applications using Next.js, React, TypeScript, PostgreSQL, Supabase, and the MERN stack. Developed responsive UIs with Tailwind CSS, built and integrated RESTful APIs, managed databases (PostgreSQL via Supabase & MongoDB) using Prisma ORM and Mongoose ODM, and collaborated closely with cross-functional teams in an Agile/SCRUM environment to deliver efficient, user-focused solutions.",
+  achievements: [
+    "Built SEO-optimized and high-performance web applications using Next.js and React, improving page load speed by 30%.",
+    "Developed responsive and visually appealing UIs with Tailwind CSS, enhancing user engagement across devices.",
+    "Designed and integrated scalable backend APIs with MongoDB and PostgreSQL (Supabase), using Prisma ORM & Mongoose ODM, ensuring smooth full-stack functionality.",
+    "Configured and managed Supabase as a backend-as-a-service platform, leveraging PostgreSQL with Prisma ORM for type-safe, efficient database queries.",
+    "Implemented server-side rendering (SSR) and static site generation (SSG) with Next.js, boosting SEO rankings and reducing time-to-first-byte.",
+    "Collaborated with cross-functional teams using JIRA in Agile sprints, consistently delivering features on time and within scope."
+  ]
+
+    },{
+      title: "Nextjs & React Developer",
       company: "UTF-Labs",
-      period: "Oct 2025 - Present",
+      period: "Oct 2025 - April 2026",
       type: "Full-time",
       icon: "/images/utf-labs.jpeg",
       // color: "from-blue-600 to-blue-800",
