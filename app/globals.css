@@ -421,6 +421,7 @@ h2 {
 }
 .project-card {
   position: relative;
+  display: block;
   border-radius: 16px;
   overflow: hidden;
   background: var(--bg-2);
