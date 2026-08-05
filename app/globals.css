@@ -589,6 +589,17 @@ h2 {
   color: var(--muted);
   font-weight: 500;
 }
+.exp-date .current {
+  display: inline-block;
+  font-family: var(--f-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 9px;
+  border-radius: 100px;
+  margin-bottom: 6px;
+}
 .exp-role h3 {
   font-family: var(--f-display);
   font-size: 1.08rem;
@@ -599,6 +610,12 @@ h2 {
   color: var(--accent);
   font-size: 0.88rem;
   font-weight: 600;
+}
+.exp-role p {
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin-top: 8px;
+  max-width: 60ch;
 }
 .exp-tags {
   display: flex;
@@ -867,6 +884,42 @@ footer {
   gap: 14px;
 }
 
+/* ---------- Experience hub scoped overrides ---------- */
+.experience-page .exp-list {
+  margin-bottom: 100px;
+}
+.experience-page .cta-band {
+  margin-bottom: 80px;
+}
+.experience-page .story-slider {
+  height: 400px;
+  margin-bottom: 70px;
+}
+.experience-page .story-slide {
+  padding: 50px 90px 50px 50px;
+}
+.experience-page .story-year-bg {
+  font-size: 10rem;
+}
+.experience-page .story-year {
+  font-size: 1.5rem;
+}
+.experience-page .story-title {
+  font-size: 1.25rem;
+}
+.experience-page .story-desc {
+  font-size: 0.92rem;
+  max-width: 50ch;
+}
+@media (max-width: 700px) {
+  .experience-page .story-slide {
+    padding: 36px 24px 80px;
+  }
+  .experience-page .story-year-bg {
+    font-size: 5.5rem;
+  }
+}
+
 /* ---------- Breadcrumb ---------- */
 .breadcrumb {
   font-size: 0.85rem;
@@ -939,6 +992,49 @@ footer {
 }
 @media (max-width: 900px) {
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Generic inner-page head ---------- */
+.page-head {
+  padding: 24px 0 56px;
+}
+.page-sub {
+  color: var(--muted);
+  max-width: 60ch;
+  font-size: 1.05rem;
+}
+
+/* ---------- Mini stat row (3-up) ---------- */
+.mini-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 64px;
+}
+.mini-stat {
+  background: var(--bg-2);
+  padding: 26px 20px;
+  text-align: center;
+}
+.mini-stat .num {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--accent);
+}
+.mini-stat p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 6px;
+}
+@media (max-width: 700px) {
+  .mini-stats {
     grid-template-columns: 1fr;
   }
 }
