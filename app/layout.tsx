@@ -2,8 +2,7 @@ import type { Metadata } from "next"
 import { Sora, Inter } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "sonner"
-import Ticker from "@/components/layout/ticker"
-import Navbar from "@/components/layout/navbar"
+import SiteHeader from "@/components/layout/site-header"
 import Footer from "@/components/layout/footer"
 
 const sora = Sora({
@@ -67,8 +66,7 @@ export default function RootLayout({
       </head>
       <body>
         <Toaster position="top-center" richColors />
-        <Ticker />
-        <Navbar />
+        <SiteHeader />
         <main>{children}</main>
         <Footer />
       </body>
