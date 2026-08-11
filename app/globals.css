@@ -2473,6 +2473,226 @@ footer {
   gap: 8px;
 }
 
+/* ---------- Experience case-study pages (/experience/[slug]) ---------- */
+.experience-detail .role-head {
+  padding: 28px 0 0;
+  max-width: 820px;
+}
+.experience-detail .meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.experience-detail .tag {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+.experience-detail h1 {
+  font-size: clamp(1.9rem, 3.8vw, 2.6rem);
+  margin-bottom: 8px;
+}
+.experience-detail .company {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.experience-detail .lede {
+  color: var(--muted);
+  font-size: 1.06rem;
+  max-width: 70ch;
+  margin-bottom: 36px;
+}
+
+.experience-detail .case-shell {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 64px;
+  align-items: start;
+  padding-bottom: 20px;
+}
+.experience-detail .case-sidebar {
+  position: sticky;
+  top: 100px;
+}
+.experience-detail .side-block {
+  margin-bottom: 34px;
+}
+.experience-detail .side-label {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  display: block;
+}
+.experience-detail .side-nav a {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--muted);
+  padding: 8px 0 8px 14px;
+  border-left: 2px solid var(--line);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.experience-detail .side-nav a:hover {
+  color: var(--text);
+}
+.experience-detail .side-nav a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+.experience-detail .side-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.experience-detail .side-stack .chip {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 4px 9px;
+  border-radius: 5px;
+  background: none;
+}
+.experience-detail .side-cta {
+  display: block;
+  text-align: center;
+  background: var(--accent);
+  color: #161208;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 12px 0;
+  border-radius: 100px;
+  transition: background 0.2s ease;
+}
+.experience-detail .side-cta:hover {
+  background: #dac079;
+}
+@media (max-width: 900px) {
+  .experience-detail .case-shell {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .experience-detail .case-sidebar {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
+  }
+  .experience-detail .side-nav {
+    display: none;
+  }
+}
+
+.experience-detail .case-main {
+  max-width: 700px;
+}
+.experience-detail .case-main h2 {
+  font-family: var(--f-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 100px;
+  padding-top: 44px;
+}
+.experience-detail .case-main > h2:first-child {
+  padding-top: 0;
+}
+.experience-detail .case-main h2 .num {
+  color: var(--accent);
+  font-family: var(--f-mono);
+  font-size: 0.88rem;
+  margin-right: 10px;
+}
+.experience-detail .case-main p {
+  color: var(--muted);
+  margin-bottom: 16px;
+  max-width: 68ch;
+}
+.experience-detail .case-main ul.points {
+  margin-bottom: 16px;
+}
+.experience-detail .case-main ul.points li {
+  color: var(--muted);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 11px;
+  max-width: 64ch;
+}
+.experience-detail .case-main ul.points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+.experience-detail .case-main ul.points li strong {
+  color: var(--text);
+}
+.experience-detail .case-main .chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.experience-detail .case-main .chip {
+  font-family: var(--f-mono);
+  font-size: 0.76rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 5px;
+  background: none;
+}
+.experience-detail .sub {
+  font-family: var(--f-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 22px 0 10px;
+}
+
+.experience-detail .callout {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 20px 22px;
+  margin: 12px 0 8px;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+.experience-detail .callout strong {
+  color: var(--text);
+}
+
+.experience-detail .prev-next {
+  display: flex;
+  justify-content: space-between;
+  padding: 56px 0 70px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+}
+.experience-detail .prev-next a {
+  padding-top: 24px;
+  display: inline-block;
+}
+.experience-detail .prev-next a:hover {
+  color: var(--accent);
+}
+
 /* ---------- Experience hub scoped overrides ---------- */
 .experience-page .exp-list {
   margin-bottom: 100px;
