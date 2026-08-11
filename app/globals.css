@@ -2492,6 +2492,11 @@ footer {
   padding: 5px 12px;
   border-radius: 100px;
 }
+.experience-detail .tag.current {
+  color: var(--accent);
+  border-color: var(--accent-soft);
+  background: var(--accent-soft);
+}
 .experience-detail h1 {
   font-size: clamp(1.9rem, 3.8vw, 2.6rem);
   margin-bottom: 8px;
@@ -2501,6 +2506,9 @@ footer {
   color: var(--accent);
   font-weight: 600;
   margin-bottom: 22px;
+}
+.experience-detail .company a:hover {
+  opacity: 0.8;
 }
 .experience-detail .lede {
   color: var(--muted);
@@ -2575,6 +2583,25 @@ footer {
 }
 .experience-detail .side-cta:hover {
   background: #dac079;
+}
+.experience-detail .side-company {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+  transition: border-color 0.2s ease;
+}
+.experience-detail .side-company:hover {
+  border-color: var(--accent);
+}
+.experience-detail .side-company b {
+  display: block;
+  color: var(--text);
+  font-family: var(--f-display);
+  font-size: 0.92rem;
+  margin-bottom: 4px;
 }
 @media (max-width: 900px) {
   .experience-detail .case-shell {

@@ -9,10 +9,13 @@ export type ExperienceDetail = {
   ogDescription: string
   orgName: string
   jobTitle: string
+  current?: boolean
   dateRange: string
   typeTag: string
   title: string
   company: string
+  companyHref?: string
+  companyDomain?: string
   lede: string
   stack: string[]
   sections: CaseSection[]
@@ -21,6 +24,320 @@ export type ExperienceDetail = {
 }
 
 export const EXPERIENCES: Record<string, ExperienceDetail> = {
+  "bricketx-pk": {
+    slug: "bricketx-pk",
+    metaTitle: "Full Stack Developer at BricketX PK | Muhammad Maaz",
+    metaDescription:
+      "How Muhammad Maaz built database infrastructure, automation workflows, and product structure for BricketX PK's investment platform — beyond typical full-stack development.",
+    ogDescription:
+      "Database infrastructure, automation workflows, and product structure for an investment platform built from zero requirements.",
+    orgName: "BricketX PK",
+    jobTitle: "Full Stack Developer (MERN | Next.js)",
+    current: true,
+    dateRange: "Apr 2026 — Present",
+    typeTag: "Full-time · On-site · Karachi",
+    title: "Full Stack Developer (MERN | Next.js)",
+    company: "BricketX PK",
+    companyHref: "https://bricketx.com",
+    companyDomain: "bricketx.com",
+    lede: "Hired to build an investment portal — but joined a project with no business requirements document, no business plan, and no database. What started as a development role ended up covering product structuring, system architecture, and automation that gave the company visibility into its own investor data for the first time.",
+    stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Zapier", "Webhooks", "SEO"],
+    sections: [
+      {
+        id: "starting-point",
+        num: "01",
+        title: "The Starting Point",
+        content: (
+          <p>
+            When I joined, BricketX wanted an investment portal built — but there was no blueprint for it. No
+            business requirements document, no formal business plan, no defined data model, no database at all. The
+            existing websites were live but not properly functional: when a visitor filled out a form, the only
+            &quot;record&quot; of it was an email notification. There was no database capturing that data anywhere.
+            As a developer, that meant starting without the one thing you usually take for granted — a clear spec to
+            build against.
+          </p>
+        ),
+      },
+      {
+        id: "database-infra",
+        num: "02",
+        title: "Database & Web Infrastructure",
+        content: (
+          <ul className="points">
+            <li>
+              <strong>Implemented Supabase</strong> as the core database layer — every website now actually records
+              submitted data instead of it disappearing into an inbox.
+            </li>
+            <li>
+              <strong>Redesigned the websites</strong> alongside SEO considerations, rebuilding them to be properly
+              functional rather than just visually present.
+            </li>
+            <li>
+              <strong>Leading the development team</strong> on this work — not just writing code solo.
+            </li>
+          </ul>
+        ),
+      },
+      {
+        id: "product-engineering",
+        num: "03",
+        title: "Product Engineering — Structuring the Investment Portal",
+        content: (
+          <>
+            <p>
+              BricketX licensed a third-party investment platform, InvestNext, as an interim solution while a fully
+              owned portal gets built. My job wasn&apos;t just to plug it in — I had to fully understand how it
+              worked: investment packages, verticals, SPVs, and exactly how each piece of data and content needed to
+              appear on the platform. This went well beyond development into what&apos;s closer to product and
+              content engineering:
+            </p>
+            <ul className="points">
+              <li>
+                Took the <strong>core business document</strong> and broke it down topic by topic, mapping which
+                content belonged to which investment package and vertical.
+              </li>
+              <li>
+                Designed the full <strong>infographics pattern</strong> — worked directly with the graphic designer,
+                specifying exactly what images and infographics were needed and how they should represent each
+                package.
+              </li>
+              <li>
+                Designed the <strong>video content pattern</strong> — briefed the video editor/animator on the
+                structure and style of videos needed to support each package and vertical.
+              </li>
+            </ul>
+            <div className="callout">
+              <strong>Why this matters:</strong> most of this content-structuring work doesn&apos;t show up on a
+              typical developer&apos;s résumé, but it was the difference between the portal actually making sense to
+              an investor and just being a pile of unorganized PDFs and screenshots.
+            </div>
+          </>
+        ),
+      },
+      {
+        id: "automation",
+        num: "04",
+        title: "Automation & Workflow Engineering",
+        content: (
+          <>
+            <p>
+              The biggest technical problem: since InvestNext is a licensed third-party platform, BricketX had zero
+              visibility into its own transactions. Once an investor paid through it, the only confirmation was a
+              manual email — there was no structured record of who invested in what, anywhere in our own systems.
+            </p>
+            <p>
+              I built a Zapier-based automation triggered off the transaction-acceptance step on the admin side, with
+              a full workflow behind it:
+            </p>
+            <ul className="points">
+              <li>Accepted transactions are recorded into a structured spreadsheet automatically.</li>
+              <li>
+                The workflow <strong>auto-generates an RFID number and QR code</strong> for each investor.
+              </li>
+              <li>
+                A <strong>webhook pushes the data into our Supabase database</strong>, closing the visibility gap
+                entirely.
+              </li>
+              <li>
+                Built a <strong>brand-new portal on top of this data</strong> — an investor-facing side showing
+                insights for the specific project/package they invested in, and an admin-facing side showing all
+                investors across every package.
+              </li>
+            </ul>
+            <p>
+              Investors now automatically receive an email with their invested package details, their RFID number,
+              and a temporary password for the new portal — no manual tracking required on either side.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: "marketing-automation",
+        num: "05",
+        title: "Marketing Automation",
+        content: (
+          <p>
+            Separately, I connected the website&apos;s lead-capture database to a live, webhook-fed spreadsheet
+            shared directly with the marketing team. Instead of leads sitting unseen, new leads now appear instantly
+            for marketing to review and reach out to — turning a manual, easy-to-miss process into an immediate one.
+          </p>
+        ),
+      },
+      {
+        id: "ownership",
+        num: "06",
+        title: "Broader Ownership",
+        content: (
+          <>
+            <p>Across all of the above, my role expanded well past writing code:</p>
+            <div className="chip-row">
+              {[
+                "System Design",
+                "Architecture",
+                "Database Modeling",
+                "Workflow Design",
+                "Project Planning",
+                "Team Leadership",
+                "Product Structuring",
+                "Content Direction",
+              ].map((chip) => (
+                <span className="chip" key={chip}>
+                  {chip}
+                </span>
+              ))}
+            </div>
+          </>
+        ),
+      },
+    ],
+    prev: { href: "/experience", label: "← All experience" },
+    next: { href: "/experience/utf-labs", label: "Next: UTF-Labs →" },
+  },
+
+  "utf-labs": {
+    slug: "utf-labs",
+    metaTitle: "Next.js & React Developer at UTF-Labs | Muhammad Maaz",
+    metaDescription:
+      "How Muhammad Maaz grew from frontend into professional backend development at UTF-Labs — Node.js, MQTT/embedded integration, server management, and migrations.",
+    ogDescription: "Backend development, MQTT/embedded integration, server management, and migration work.",
+    orgName: "UTF-Labs",
+    jobTitle: "Next.js & React Developer",
+    dateRange: "Oct 2025 — Apr 2026",
+    typeTag: "Full-time · On-site · Karachi",
+    title: "Next.js & React Developer",
+    company: "UTF-Labs",
+    companyHref: "https://www.utf-labs.com/",
+    companyDomain: "utf-labs.com",
+    lede: "Joined with a frontend background from React experience, but this is where I professionally learned backend development and put it to work on real, live projects — Node.js/Express APIs, MQTT integration with an embedded systems team, server management, and migrating projects across major framework versions.",
+    stack: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "PostgreSQL",
+      "Prisma",
+      "Mongoose",
+      "Redis",
+      "MQTT",
+      "PM2",
+      "n8n",
+    ],
+    sections: [
+      {
+        id: "frontend-to-backend",
+        num: "01",
+        title: "From Frontend to Backend",
+        content: (
+          <p>
+            I joined UTF-Labs with a frontend background, mostly React experience, under the title Next.js &amp;
+            React Developer. What made this role different is that it&apos;s where I professionally learned backend
+            development and actually applied it on production projects — Node.js and Express.js on the API side,
+            with both MongoDB and PostgreSQL as the underlying databases.
+          </p>
+        ),
+      },
+      {
+        id: "mqtt-embedded",
+        num: "02",
+        title: "MQTT & Embedded Systems Integration",
+        content: (
+          <p>
+            Most projects at UTF-Labs connected to work owned by an embedded systems team. I built the APIs that
+            bridged the two sides — connecting to embedded devices through MQTT, using a message broker to publish
+            and subscribe to data rather than typical REST-only communication. This was a different integration
+            pattern than most web-only backend work, and it shaped how I think about real-time, event-driven
+            systems.
+          </p>
+        ),
+      },
+      {
+        id: "fullstack-nextjs",
+        num: "03",
+        title: "Full-Stack Ownership on a Next.js Project",
+        content: (
+          <p>
+            One project in particular went beyond frontend work entirely — a full-stack Next.js build where I owned
+            both the frontend and the backend, rather than handing off the API layer to someone else.
+          </p>
+        ),
+      },
+      {
+        id: "server-management",
+        num: "04",
+        title: "Server Management & Live Streaming",
+        content: (
+          <ul className="points">
+            <li>
+              Maintained production servers directly — uploading build/<code>.dist</code> files and managing running
+              processes with <strong>PM2</strong>.
+            </li>
+            <li>
+              Implemented <strong>MediaMTX</strong> on the server for one project, powering live video streaming
+              functionality.
+            </li>
+            <li>
+              Used <strong>Redis</strong> for caching to keep frequently accessed data fast under load.
+            </li>
+          </ul>
+        ),
+      },
+      {
+        id: "migrations",
+        num: "05",
+        title: "Framework & Database Migrations",
+        content: (
+          <>
+            <p>Handled version migrations rather than just building on top of whatever was already there:</p>
+            <ul className="points">
+              <li>
+                Migrated projects from <strong>older Next.js versions to current ones</strong>.
+              </li>
+              <li>
+                Migrated <strong>Prisma from older to newer versions</strong> — used with PostgreSQL on some projects
+                and with MongoDB on others, alongside <strong>Mongoose</strong> for more direct MongoDB work.
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        id: "automation-n8n",
+        num: "06",
+        title: "Automation with n8n",
+        content: (
+          <p>
+            Built several automation workflows using <strong>n8n</strong> to handle repetitive processes without
+            needing a fully custom backend service for each one.
+          </p>
+        ),
+      },
+      {
+        id: "existing-codebases",
+        num: "07",
+        title: "Working in Existing Codebases",
+        content: (
+          <>
+            <p>
+              Most of the projects I worked on at UTF-Labs weren&apos;t greenfield — they were existing, live,
+              running systems built by other developers. That meant a different kind of experience than starting
+              from zero: reading and understanding someone else&apos;s architecture, fixing bugs on projects already
+              in production, and implementing new features into codebases I didn&apos;t originally write. A smaller
+              number of projects I did build from the start.
+            </p>
+            <div className="callout">
+              <strong>Why this matters:</strong> building on someone else&apos;s live codebase without breaking
+              production is a different skill than greenfield development — it&apos;s most of what real backend work
+              actually looks like day to day.
+            </div>
+          </>
+        ),
+      },
+    ],
+    prev: { href: "/experience/bricketx-pk", label: "← Previous: BricketX PK" },
+    next: { href: "/experience/brb-group", label: "Next: BRB Group →" },
+  },
+
   "brb-group": {
     slug: "brb-group",
     metaTitle: "React Development at BRB Group | Muhammad Maaz",

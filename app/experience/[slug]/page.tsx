@@ -59,6 +59,7 @@ export default async function ExperienceDetailPage({ params }: { params: Promise
     "@context": "https://schema.org",
     "@type": "Organization",
     name: exp.orgName,
+    ...(exp.companyHref ? { url: exp.companyHref } : {}),
     employee: { "@type": "Person", name: "Muhammad Maaz", jobTitle: exp.jobTitle },
   }
 
@@ -70,10 +71,26 @@ export default async function ExperienceDetailPage({ params }: { params: Promise
       <div className="wrap">
         <Breadcrumb items={[{ label: "Experience", href: "/experience" }, { label: exp.orgName }]} />
 
-        <RoleHead dateRange={exp.dateRange} typeTag={exp.typeTag} title={exp.title} company={exp.company} lede={exp.lede} />
+        <RoleHead
+          current={exp.current}
+          dateRange={exp.dateRange}
+          typeTag={exp.typeTag}
+          title={exp.title}
+          company={exp.company}
+          companyHref={exp.companyHref}
+          lede={exp.lede}
+        />
 
         <div className="case-shell">
-          <CaseSidebar navItems={exp.sections.map((s) => ({ id: s.id, label: String(s.title) }))} stack={exp.stack} />
+          <CaseSidebar
+            navItems={exp.sections.map((s) => ({ id: s.id, label: String(s.title) }))}
+            stack={exp.stack}
+            company={
+              exp.companyHref && exp.companyDomain
+                ? { name: exp.company, url: exp.companyHref, domain: exp.companyDomain }
+                : undefined
+            }
+          />
 
           <article className="case-main">
             {exp.sections.map((section) => (

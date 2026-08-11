@@ -5,9 +5,11 @@ import { useEffect, useState } from "react"
 export default function CaseSidebar({
   navItems,
   stack,
+  company,
 }: {
   navItems: { id: string; label: string }[]
   stack: string[]
+  company?: { name: string; url: string; domain: string }
 }) {
   const [activeId, setActiveId] = useState<string | null>(null)
 
@@ -49,6 +51,15 @@ export default function CaseSidebar({
           ))}
         </div>
       </div>
+      {company && (
+        <div className="side-block">
+          <span className="side-label">Company</span>
+          <a className="side-company" href={company.url} target="_blank" rel="noopener noreferrer">
+            <b>{company.name}</b>
+            {company.domain} →
+          </a>
+        </div>
+      )}
       <a href="/contact" className="side-cta">
         Get In Touch
       </a>
