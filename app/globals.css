@@ -1322,6 +1322,685 @@ footer {
   margin-bottom: 0;
 }
 
+/* ---------- Resume page ---------- */
+.resume-page .resume-head {
+  padding: 28px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.resume-page .avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), #ead9a8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #161208;
+  margin-bottom: 16px;
+}
+.resume-page h1 {
+  font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+  margin-bottom: 6px;
+}
+.resume-page .role-title {
+  font-family: var(--f-mono);
+  color: var(--accent);
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+}
+.resume-page .contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+.resume-page .contact-line a:hover {
+  color: var(--accent);
+}
+.resume-page .print-btn {
+  background: var(--accent);
+  color: #161208;
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 13px 24px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.resume-page .print-btn:hover {
+  transform: translateY(-2px);
+  background: #dac079;
+}
+
+.resume-page .cv-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  padding-bottom: 80px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .resume-page .cv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resume-page .cv-side .block {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 16px;
+}
+.resume-page .block-title {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 14px;
+  display: block;
+}
+.resume-page .skill-group {
+  margin-bottom: 14px;
+}
+.resume-page .skill-group:last-child {
+  margin-bottom: 0;
+}
+.resume-page .skill-group h4 {
+  font-size: 0.78rem;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.resume-page .cv-side .chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.resume-page .cv-side .chip {
+  font-family: var(--f-mono);
+  font-size: 0.66rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: none;
+}
+.resume-page .edu-item,
+.resume-page .cert-item {
+  margin-bottom: 14px;
+}
+.resume-page .edu-item:last-child,
+.resume-page .cert-item:last-child {
+  margin-bottom: 0;
+}
+.resume-page .edu-item h4,
+.resume-page .cert-item h4 {
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.resume-page .edu-item .inst,
+.resume-page .cert-item .issuer {
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.resume-page .edu-item .meta,
+.resume-page .cert-item .meta {
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+.resume-page .cv-main section {
+  margin-bottom: 40px;
+  padding: 0;
+}
+.resume-page .cv-main h2 {
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.resume-page .cv-main h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.resume-page .summary p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 75ch;
+}
+
+.resume-page .exp-entry {
+  margin-bottom: 26px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+}
+.resume-page .exp-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.resume-page .exp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.resume-page .exp-top h3 {
+  font-family: var(--f-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+.resume-page .exp-top .dates {
+  font-family: var(--f-mono);
+  font-size: 0.76rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.resume-page .exp-entry .co {
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.resume-page .exp-entry .co a:hover {
+  opacity: 0.8;
+}
+.resume-page .exp-entry ul {
+  margin-bottom: 0;
+}
+.resume-page .exp-entry li {
+  color: var(--muted);
+  font-size: 0.87rem;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+  max-width: 70ch;
+}
+.resume-page .exp-entry li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+.resume-page .exp-entry li strong {
+  color: var(--text);
+}
+.resume-page .exp-more {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.resume-page .pub-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+.resume-page .pub-card .issuer {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+.resume-page .pub-card h3 {
+  font-family: var(--f-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.resume-page .pub-card p {
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin-bottom: 10px;
+}
+.resume-page .pub-card a {
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+@media print {
+  header,
+  footer,
+  .nav-cta,
+  .resume-page .print-btn,
+  .breadcrumb {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #111;
+  }
+  .resume-page .cv-side .block {
+    background: #f7f7f7;
+    border-color: #ddd;
+  }
+  .resume-page .exp-entry {
+    border-color: #ddd;
+  }
+  .resume-page .cv-main h2::after {
+    background: #ddd;
+  }
+  .resume-page a {
+    color: #111;
+    text-decoration: none;
+  }
+  .resume-page .role-title,
+  .resume-page .block-title,
+  .resume-page .co,
+  .resume-page .exp-more,
+  .resume-page .pub-card .issuer,
+  .resume-page .pub-card a {
+    color: #8a6d2f !important;
+  }
+}
+
+/* ---------- Testimonials page (dedicated card styles) ---------- */
+.testimonial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testimonial-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 36px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.testimonial-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+.testimonial-quote {
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.testimonial-who {
+  font-size: 0.9rem;
+}
+.testimonial-who .name {
+  color: var(--accent);
+  font-weight: 600;
+}
+.testimonial-who .role {
+  color: var(--muted);
+}
+.testimonial-source {
+  font-size: 0.78rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+.testimonial-source.verified {
+  color: var(--accent);
+  border-color: var(--accent-soft);
+  background: var(--accent-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ---------- Contact page ---------- */
+.contact-page .contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  margin-bottom: 90px;
+}
+.contact-page .info-bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.contact-page .info-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px 22px;
+  transition: border-color 0.25s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.contact-page .info-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+.contact-page .info-card .icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+.contact-page .info-card .label {
+  font-family: var(--f-body);
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.contact-page .info-card .value {
+  font-family: var(--f-display);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+}
+.contact-page .info-card .value a:hover {
+  color: var(--accent);
+}
+.contact-page .info-card.wide {
+  grid-column: span 2;
+}
+.contact-page .badge-avail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--f-body);
+  font-size: 0.82rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.contact-page .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3fd97f;
+  box-shadow: 0 0 0 0 rgba(63, 217, 127, 0.6);
+  animation: pulse-dot 2.2s infinite;
+}
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(63, 217, 127, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(63, 217, 127, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(63, 217, 127, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-page .dot {
+    animation: none;
+  }
+}
+.contact-page .social-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+.contact-page .social-btn {
+  border: 1px solid var(--line);
+  padding: 9px 16px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.contact-page .social-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+@media (max-width: 500px) {
+  .contact-page .info-bento {
+    grid-template-columns: 1fr;
+  }
+  .contact-page .info-card.wide {
+    grid-column: span 1;
+  }
+}
+
+.contact-page .form-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 36px;
+}
+.contact-page .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.contact-page .field label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.contact-page .field input,
+.contact-page .field textarea {
+  width: 100%;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 13px 14px;
+  color: var(--text);
+  font-family: var(--f-body);
+  font-size: 0.92rem;
+}
+.contact-page .field input:focus,
+.contact-page .field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.contact-page .field {
+  margin-bottom: 16px;
+}
+.contact-page .field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.contact-page .submit-btn {
+  background: var(--accent);
+  color: #161208;
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 14px 28px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.contact-page .submit-btn:hover {
+  transform: translateY(-2px);
+  background: #dac079;
+}
+.contact-page .form-note {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 14px;
+}
+@media (max-width: 900px) {
+  .contact-page .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-page .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-page .faq-teaser {
+  background: linear-gradient(135deg, var(--bg-2), var(--bg-3));
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.contact-page .faq-teaser p {
+  color: var(--muted);
+  max-width: 50ch;
+}
+.contact-page .faq-teaser .btn-outline {
+  display: inline-flex;
+  padding: 12px 22px;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ---------- FAQ page (details/summary accordion) ---------- */
+.faq-page .wrap {
+  max-width: 900px;
+}
+.faq-page .faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-page .faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 26px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--f-display);
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+.faq-page .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-page .faq-item summary .plus {
+  font-family: var(--f-body);
+  color: var(--accent);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.faq-page .faq-item[open] summary .plus {
+  transform: rotate(45deg);
+}
+.faq-page .faq-item p {
+  color: var(--muted);
+  padding-bottom: 26px;
+  max-width: 68ch;
+  font-size: 0.96rem;
+}
+
+/* ---------- Skills page ---------- */
+.skills-page .skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skills-page .skill-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 34px;
+  transition: border-color 0.25s ease;
+}
+.skills-page .skill-card:hover {
+  border-color: var(--accent);
+}
+.skills-page .skill-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.skills-page .skill-card h3 {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.skills-page .skill-level {
+  font-family: var(--f-body);
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.skills-page .skill-card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin-bottom: 18px;
+  max-width: 75ch;
+}
+.skills-page .skill-card .chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.skills-page .skill-card .chip {
+  font-size: 0.78rem;
+  color: var(--text);
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+.skills-page .skill-links {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.skills-page .skill-links a {
+  color: var(--accent);
+  font-weight: 600;
+}
+.skills-page .skill-links a:hover {
+  opacity: 0.8;
+}
+
 /* ---------- Experience hub scoped overrides ---------- */
 .experience-page .exp-list {
   margin-bottom: 100px;
