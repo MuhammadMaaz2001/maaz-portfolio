@@ -2001,6 +2001,451 @@ footer {
   opacity: 0.8;
 }
 
+/* ---------- Service detail pages (/services/[slug]) ---------- */
+.service-detail .hero {
+  padding: 36px 0 60px;
+}
+.service-detail .hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .service-detail .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.service-detail .eyebrow {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+}
+.service-detail h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+.service-detail .lede {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 52ch;
+  margin-bottom: 24px;
+}
+.service-detail .chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.service-detail .chip {
+  font-family: var(--f-mono);
+  font-size: 0.76rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 5px;
+  background: none;
+}
+
+.service-detail .visual-panel {
+  background: linear-gradient(180deg, var(--bg-2), var(--bg-3));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.6);
+}
+.service-detail .vp-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.service-detail .vp-head span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #3a3a44;
+}
+.service-detail .vp-head .lbl {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-left: 8px;
+}
+.service-detail .vp-body {
+  flex: 1;
+}
+
+/* Flow visual (business automation) */
+.service-detail .flow-vis {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.service-detail .flow-node {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  position: relative;
+}
+.service-detail .flow-node::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: -50%;
+  bottom: 50%;
+  width: 1px;
+  background: var(--line);
+}
+.service-detail .flow-node:first-child::before {
+  display: none;
+}
+.service-detail .flow-dot {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: var(--bg-3);
+  border: 1.5px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.service-detail .flow-node span {
+  font-family: var(--f-mono);
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+.service-detail .flow-node b {
+  color: var(--text);
+}
+.service-detail .flow-triggers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.service-detail .trigger-tag {
+  font-family: var(--f-mono);
+  font-size: 0.66rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* Review list (technical consulting) */
+.service-detail .review-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+.service-detail .review-item:last-child {
+  border-bottom: none;
+}
+.service-detail .review-item .mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  background: var(--accent-soft);
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+}
+.service-detail .review-item .mark::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--accent);
+}
+.service-detail .review-item .mark.pending {
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--line);
+}
+.service-detail .review-item .mark.pending::after {
+  content: "";
+}
+.service-detail .review-item p {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+/* RBAC table (internal tools) */
+.service-detail .rbac-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+}
+.service-detail .rbac-row:last-child {
+  border-bottom: none;
+}
+.service-detail .rbac-row .role {
+  color: var(--text);
+}
+.service-detail .perm {
+  padding: 3px 9px;
+  border-radius: 100px;
+  font-size: 0.66rem;
+}
+.service-detail .perm.full {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.service-detail .perm.read {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+.service-detail .perm.none {
+  background: transparent;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+}
+
+/* Chat log (AI integration) */
+.service-detail .chat-log {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.service-detail .bubble {
+  max-width: 78%;
+  padding: 10px 13px;
+  border-radius: 12px;
+  font-family: var(--f-body);
+  font-size: 0.78rem;
+  color: var(--text);
+}
+.service-detail .bubble.user {
+  align-self: flex-end;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-bottom-right-radius: 3px;
+}
+.service-detail .bubble.agent {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 3px;
+}
+.service-detail .typing {
+  display: inline-flex;
+  gap: 3px;
+  align-self: flex-start;
+  padding: 10px 13px;
+}
+.service-detail .typing span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--muted);
+  animation: blink-dot 1.2s infinite;
+}
+.service-detail .typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.service-detail .typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes blink-dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-detail .typing span {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+/* Dashboard preview (dashboard development) */
+.service-detail .dash-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.service-detail .dash-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+}
+.service-detail .dash-card .k {
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+.service-detail .dash-card .v {
+  font-family: var(--f-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.service-detail .dash-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+}
+.service-detail .dash-bars i {
+  flex: 1;
+  background: linear-gradient(180deg, #ead9a8, var(--accent));
+  border-radius: 2px 2px 0 0;
+  animation: grow-bar 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes grow-bar {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-detail .dash-bars i {
+    animation: none;
+  }
+}
+
+/* Shared section/points/related/cta shell for service detail pages */
+.service-detail section {
+  padding: 44px 0 0;
+}
+.service-detail section h2 {
+  font-family: var(--f-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.service-detail section p {
+  color: var(--muted);
+  margin-bottom: 14px;
+  max-width: 68ch;
+}
+.service-detail ul.points {
+  margin-bottom: 8px;
+}
+.service-detail ul.points li {
+  color: var(--muted);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+  max-width: 64ch;
+}
+.service-detail ul.points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+.service-detail ul.points li strong {
+  color: var(--text);
+}
+
+.service-detail .related-box {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px;
+  margin-top: 16px;
+}
+.service-detail .related-box .label {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+  display: block;
+}
+.service-detail .related-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.service-detail .related-link {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+  border-radius: 100px;
+}
+.service-detail .related-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.service-detail .plain-cta-band {
+  background: linear-gradient(135deg, var(--bg-2), var(--bg-3));
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 48px 40px;
+  text-align: center;
+  margin: 56px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+.service-detail .plain-cta-band h2 {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+.service-detail .plain-cta-band p {
+  color: var(--muted);
+  margin-bottom: 24px;
+  max-width: none;
+}
+.service-detail .plain-cta-band .cta-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service-detail .btn {
+  font-size: 0.88rem;
+  padding: 13px 24px;
+  gap: 8px;
+}
+
 /* ---------- Experience hub scoped overrides ---------- */
 .experience-page .exp-list {
   margin-bottom: 100px;
