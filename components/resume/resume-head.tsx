@@ -1,5 +1,3 @@
-"use client"
-
 export default function ResumeHead() {
   return (
     <div className="resume-head" data-reveal="">
@@ -16,9 +14,6 @@ export default function ResumeHead() {
           </a>
         </div>
       </div>
-      <button className="print-btn" onClick={() => window.print()}>
-        ↓ Download PDF
-      </button>
     </div>
   )
 }

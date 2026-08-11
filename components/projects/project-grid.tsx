@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 type Project = {
   slug: string
   title: string
@@ -98,14 +96,11 @@ export default function ProjectGrid() {
   return (
     <div className="project-grid">
       {PROJECTS.map((project) => (
-        <Link className="project-card" href={`/projects/${project.slug}`} data-reveal={project.reveal} key={project.slug}>
+        <div className="project-card" data-reveal={project.reveal} key={project.slug}>
           {project.image ? (
             <div className="project-media">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={project.image} alt={project.alt} />
-              <div className="project-overlay">
-                <span>View Case Study →</span>
-              </div>
             </div>
           ) : (
             <div className="no-media" />
@@ -130,7 +125,7 @@ export default function ProjectGrid() {
               ))}
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   )
