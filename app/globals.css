@@ -2141,6 +2141,33 @@ footer {
   border-radius: 100px;
 }
 
+/* Stack layers (full stack development) */
+.service-detail .stack-layer {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  font-family: var(--f-mono);
+  font-size: 0.76rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.2s ease;
+}
+.service-detail .stack-layer:hover {
+  border-color: var(--accent);
+}
+.service-detail .stack-layer b {
+  color: var(--text);
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.service-detail .stack-layer span {
+  color: var(--muted);
+}
+
 /* Review list (technical consulting) */
 .service-detail .review-item {
   display: flex;

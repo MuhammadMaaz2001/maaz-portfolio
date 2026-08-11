@@ -4,6 +4,7 @@ import ReviewList from "./visuals/review-list"
 import RbacTable from "./visuals/rbac-table"
 import ChatLog from "./visuals/chat-log"
 import DashPreview from "./visuals/dash-preview"
+import StackLayers from "./visuals/stack-layers"
 
 export type ServiceDetail = {
   slug: string
@@ -25,6 +26,34 @@ export type ServiceDetail = {
 }
 
 export const SERVICES: Record<string, ServiceDetail> = {
+  "full-stack-development": {
+    slug: "full-stack-development",
+    serviceNum: "01",
+    breadcrumbLabel: "Full Stack Development",
+    title: <>Full Stack Development</>,
+    titlePlain: "Full Stack Development",
+    metaTitle: "Full Stack Development Services | React, Next.js & Node.js — Muhammad Maaz",
+    metaDescription:
+      "End-to-end full stack development services — React, Next.js, Node.js, and MongoDB/PostgreSQL, from database schema to deployed UI.",
+    serviceType: "Full Stack Development",
+    lede: "End-to-end web application development — from database schema and API design through to a deployed, production-ready frontend. This is the core of what I do across every role.",
+    chips: ["React", "Next.js", "Node.js", "MongoDB", "PostgreSQL"],
+    fileLabel: "stack.config",
+    visual: <StackLayers />,
+    points: [
+      { strong: "Database design", rest: "— schema modeling in MongoDB or PostgreSQL, matched to how the data actually needs to be queried." },
+      { strong: "API development", rest: "— REST APIs built in Node.js/Express, integrated cleanly with the frontend." },
+      { strong: "Frontend build", rest: "— React or Next.js interfaces, responsive and type-safe with TypeScript." },
+      { strong: "Deployment", rest: "— getting the finished application live, not just handing off code." },
+    ],
+    related: [
+      { href: "/experience/bricketx-pk", label: "BricketX PK — Full-Stack Platform" },
+      { href: "/projects/konnect-it", label: "Konnect-It — Real-Time Chat" },
+      { href: "/projects/e-commerce-platform", label: "E-Commerce Platform" },
+    ],
+    ctaTitle: "Have a full-stack project in mind?",
+    ctaDesc: "From a rough idea to a deployed product — let's talk scope.",
+  },
   "dashboard-development": {
     slug: "dashboard-development",
     serviceNum: "02",
