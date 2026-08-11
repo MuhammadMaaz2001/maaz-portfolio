@@ -1,4 +1,3 @@
-import Link from "next/link"
 import StatCounter from "./stat-counter"
 
 const STATS = [
@@ -23,12 +22,12 @@ export default function Hero() {
           FastAPI services, backed by MongoDB and PostgreSQL.
         </p>
         <div className="cta-row" data-reveal="3">
-          <Link href="/projects" className="btn btn-primary">
+          <a href="#work" className="btn btn-primary">
             View My Work →
-          </Link>
-          <Link href="/contact" className="btn btn-outline">
+          </a>
+          <a href="#contact" className="btn btn-outline">
             Get In Touch
-          </Link>
+          </a>
         </div>
 
         <div className="stat-row" data-reveal="4">

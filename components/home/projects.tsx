@@ -77,7 +77,7 @@ export default function Projects() {
 
         <div className="project-grid">
           {PROJECTS.map((project) => (
-            <Link className="project-card" href={`/projects/${project.slug}`} data-reveal={project.reveal} key={project.slug}>
+            <div className="project-card" data-reveal={project.reveal} key={project.slug}>
               {project.nda ? (
                 <div className="no-media" />
               ) : (
@@ -101,7 +101,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

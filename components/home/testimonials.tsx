@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const TESTIMONIALS = [
   {
     quote:
@@ -29,9 +31,12 @@ export default function Testimonials() {
         <span className="section-tag" data-reveal="">
           Recommendations
         </span>
-        <h2 data-reveal="">What colleagues say.</h2>
+        <h2 data-reveal="">What people say.</h2>
         <p className="section-sub" data-reveal="">
-          From people who&apos;ve worked with me directly.
+          From colleagues and clients I&apos;ve worked with directly.{" "}
+          <Link href="/testimonials" style={{ color: "var(--accent)" }}>
+            See all 5 →
+          </Link>
         </p>
 
         <div className="testi-grid">

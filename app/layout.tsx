@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Sora, Inter } from "next/font/google"
+import { Sora, Inter, IBM_Plex_Mono } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "sonner"
 import SiteHeader from "@/components/layout/site-header"
@@ -16,6 +16,13 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--f-body",
+  display: "swap",
+})
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--f-mono",
   display: "swap",
 })
 
@@ -57,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="en" className={`${sora.variable} ${inter.variable} ${ibmPlexMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
