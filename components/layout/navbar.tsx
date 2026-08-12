@@ -60,25 +60,36 @@ export default function Navbar() {
   }, [menuOpen])
 
   return (
-    <header>
-      <nav className="wrap">
-        <Link href="/" className="logo">
-          Maaz<span>.</span>
+    <header className="sticky top-0 z-50 border-b border-ink-line bg-ink-bg/[0.82] backdrop-blur-md">
+      <nav className="mx-auto flex h-[76px] max-w-[1180px] items-center justify-between px-[18px] sm:px-7">
+        <Link href="/" className="font-display text-[1.15rem] font-bold">
+          Maaz<span className="text-ink-gold">.</span>
         </Link>
 
-        <ul className="nav-links">
+        <ul className="hidden gap-[34px] text-[0.9rem] font-medium text-ink-muted min-[861px]:flex">
           {NAV_ITEMS.map((item) => {
             const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
             return (
-              <li key={item.href} className={item.dropdown ? "has-dropdown" : undefined}>
-                <Link href={item.href} className={isActive ? "active" : undefined}>
+              <li key={item.href} className="group relative">
+                <Link
+                  href={item.href}
+                  className={`${isActive ? "text-ink-gold" : ""} hover:text-ink-text`}
+                >
                   {item.label}
-                  {item.dropdown && <span className="caret">▾</span>}
+                  {item.dropdown && (
+                    <span className="ml-0.5 inline-block text-[0.65rem] opacity-70 transition-transform duration-200 group-hover:rotate-180">
+                      ▾
+                    </span>
+                  )}
                 </Link>
                 {item.dropdown && (
-                  <div className="dropdown">
+                  <div className="invisible absolute left-1/2 top-[calc(100%+14px)] z-[60] flex min-w-[240px] -translate-x-1/2 translate-y-1.5 flex-col gap-0.5 rounded-2xl border border-ink-line bg-ink-bg-2 p-2.5 opacity-0 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                     {item.dropdown.map((sub) => (
-                      <Link href={sub.href} key={sub.href}>
+                      <Link
+                        href={sub.href}
+                        key={sub.href}
+                        className="block whitespace-nowrap rounded-lg px-3 py-2.5 text-[0.85rem] text-ink-muted hover:bg-ink-gold-soft hover:text-ink-gold"
+                      >
                         {sub.label}
                       </Link>
                     ))}
@@ -89,50 +100,74 @@ export default function Navbar() {
           })}
         </ul>
 
-        <Link href="/contact" className="nav-cta desktop-only">
+        <Link
+          href="/contact"
+          className="hidden rounded-full border border-ink-gold px-[18px] py-2.5 text-[0.85rem] font-semibold text-ink-gold transition-colors hover:bg-ink-gold hover:text-[#161208] min-[861px]:inline-block"
+        >
           Let&apos;s Talk
         </Link>
 
         <button
           type="button"
-          className={`nav-toggle${menuOpen ? " open" : ""}`}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
+          className="flex h-11 w-11 flex-shrink-0 flex-col items-center justify-center gap-[5px] min-[861px]:hidden"
         >
-          <span />
-          <span />
-          <span />
+          <span
+            className={`block h-0.5 w-[22px] rounded-sm bg-ink-text transition-transform duration-200 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
+          />
+          <span className={`block h-0.5 w-[22px] rounded-sm bg-ink-text transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+          <span
+            className={`block h-0.5 w-[22px] rounded-sm bg-ink-text transition-transform duration-200 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+          />
         </button>
       </nav>
 
-      <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
-        <ul className="mobile-nav-links">
+      <div
+        className={`overflow-hidden border-b border-ink-line bg-ink-bg/[0.98] backdrop-blur-md transition-[max-height] duration-300 ease-in-out min-[861px]:hidden ${
+          menuOpen ? "max-h-[calc(100vh-76px)] overflow-y-auto" : "max-h-0"
+        }`}
+      >
+        <ul className="px-5 pb-5 pt-2">
           {NAV_ITEMS.map((item) => {
             const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
             const isAccordionOpen = openAccordion === item.href
             return (
-              <li key={item.href} className={item.dropdown ? "has-accordion" : undefined}>
-                <div className="mobile-nav-row">
-                  <Link href={item.href} className={isActive ? "active" : undefined}>
+              <li key={item.href} className="border-b border-ink-line">
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={item.href}
+                    className={`flex min-h-11 flex-1 items-center py-4 text-base font-medium ${isActive ? "text-ink-gold" : "text-ink-muted"}`}
+                  >
                     {item.label}
                   </Link>
                   {item.dropdown && (
                     <button
                       type="button"
-                      className={`accordion-toggle${isAccordionOpen ? " open" : ""}`}
                       aria-label={`Toggle ${item.label} submenu`}
                       aria-expanded={isAccordionOpen}
                       onClick={() => setOpenAccordion(isAccordionOpen ? null : item.href)}
+                      className={`h-11 w-11 text-[1.1rem] transition-transform duration-200 ${
+                        isAccordionOpen ? "rotate-180 text-ink-gold" : "text-ink-muted"
+                      }`}
                     >
                       ▾
                     </button>
                   )}
                 </div>
                 {item.dropdown && (
-                  <div className={`mobile-accordion${isAccordionOpen ? " open" : ""}`}>
+                  <div
+                    className={`flex flex-col overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+                      isAccordionOpen ? "max-h-[600px] pb-2.5" : "max-h-0"
+                    }`}
+                  >
                     {item.dropdown.map((sub) => (
-                      <Link href={sub.href} key={sub.href}>
+                      <Link
+                        href={sub.href}
+                        key={sub.href}
+                        className="flex min-h-11 items-center py-3 pl-[18px] text-[0.92rem] text-ink-muted hover:text-ink-gold"
+                      >
                         {sub.label}
                       </Link>
                     ))}
@@ -142,7 +177,10 @@ export default function Navbar() {
             )
           })}
         </ul>
-        <Link href="/contact" className="nav-cta mobile-cta">
+        <Link
+          href="/contact"
+          className="mx-5 mb-6 mt-5 block min-h-11 rounded-full border border-ink-gold py-3.5 text-center font-semibold text-ink-gold"
+        >
           Let&apos;s Talk
         </Link>
       </div>
