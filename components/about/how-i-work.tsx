@@ -26,11 +26,15 @@ export default function HowIWork() {
       <p className="section-sub" data-reveal="1">
         A few principles that guide how I approach every project, regardless of stack or scope.
       </p>
-      <div className="value-grid">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {VALUES.map((value) => (
-          <div className="value-card" data-reveal={value.reveal} key={value.title}>
-            <h3>{value.title}</h3>
-            <p>{value.desc}</p>
+          <div
+            className="rounded-2xl border border-ink-line bg-ink-bg-2 p-[30px] transition-[border-color,transform] duration-200 hover:-translate-y-1 hover:border-ink-gold"
+            data-reveal={value.reveal}
+            key={value.title}
+          >
+            <h3 className="mb-2.5 font-display text-[1.05rem] font-bold">{value.title}</h3>
+            <p className="text-[0.88rem] text-ink-muted">{value.desc}</p>
           </div>
         ))}
       </div>

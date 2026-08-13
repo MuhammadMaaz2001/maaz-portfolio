@@ -55,12 +55,18 @@ export default function Certifications() {
         gap — technical skill validation and, deliberately, project management, since shipping software well is as
         much about process as it is about code.
       </p>
-      <div className="cert-grid">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {CERTS.map((cert) => (
-          <div className="cert-card" data-reveal={cert.reveal} key={cert.title}>
-            <div className="cert-issuer">{cert.issuer}</div>
-            <h3>{cert.title}</h3>
-            <p>{cert.desc}</p>
+          <div
+            className="rounded-2xl border border-ink-line bg-ink-bg-2 p-[26px] transition-[border-color,transform] duration-200 hover:-translate-y-1 hover:border-ink-gold"
+            data-reveal={cert.reveal}
+            key={cert.title}
+          >
+            <div className="mb-3 font-display text-[0.72rem] uppercase tracking-[0.06em] text-ink-gold">
+              {cert.issuer}
+            </div>
+            <h3 className="mb-2 font-display text-[1rem] font-bold">{cert.title}</h3>
+            <p className="text-[0.85rem] text-ink-muted">{cert.desc}</p>
           </div>
         ))}
       </div>

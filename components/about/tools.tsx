@@ -15,13 +15,18 @@ export default function Tools() {
         This is the actual stack I reach for day to day, not an exhaustive list of everything I&apos;ve ever touched
         — every technology below has shipped in a real project, not just a tutorial.
       </p>
-      <div className="stack-grid" data-reveal="2">
+      <div
+        className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink-line bg-ink-line sm:grid-cols-3"
+        data-reveal="2"
+      >
         {STACK.map((col) => (
-          <div className="stack-col" key={col.title}>
-            <h4>{col.title}</h4>
-            <div className="chip-row">
+          <div className="bg-ink-bg-2 p-7" key={col.title}>
+            <h4 className="mb-4 font-display text-[0.78rem] uppercase tracking-[0.08em] text-ink-gold">
+              {col.title}
+            </h4>
+            <div className="flex flex-wrap gap-1.5">
               {col.items.map((item) => (
-                <span className="chip" key={item}>
+                <span className="rounded-full border border-ink-line px-2.5 py-1 text-[0.7rem] text-ink-muted" key={item}>
                   {item}
                 </span>
               ))}

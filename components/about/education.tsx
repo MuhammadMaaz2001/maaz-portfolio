@@ -26,14 +26,14 @@ export default function Education() {
         Background
       </span>
       <h2 data-reveal="">Education</h2>
-      <div className="edu-list" data-reveal="1">
+      <div className="flex flex-col gap-px overflow-hidden rounded-2xl border border-ink-line bg-ink-line" data-reveal="1">
         {EDUCATION.map((edu) => (
-          <div className="edu-row" key={edu.title}>
-            <div className="edu-date">{edu.date}</div>
+          <div className="grid grid-cols-1 gap-2 bg-ink-bg-2 p-7 sm:grid-cols-[170px_1fr] sm:items-start sm:gap-6 sm:px-8 sm:py-7" key={edu.title}>
+            <div className="text-[0.82rem] font-medium text-ink-muted">{edu.date}</div>
             <div>
-              <h3>{edu.title}</h3>
-              <div className="inst">{edu.inst}</div>
-              <p>{edu.desc}</p>
+              <h3 className="mb-1 font-display text-[1.05rem] font-bold">{edu.title}</h3>
+              <div className="mb-2 text-[0.88rem] font-semibold text-ink-gold">{edu.inst}</div>
+              <p className="max-w-[60ch] text-[0.88rem] text-ink-muted">{edu.desc}</p>
             </div>
           </div>
         ))}
