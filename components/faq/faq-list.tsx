@@ -18,7 +18,7 @@ const FAQS: { q: string; a: React.ReactNode; open?: boolean }[] = [
       <>
         Yes — alongside full-time work at BricketX PK, I take on select freelance and contract projects, particularly
         dashboards and full-stack builds. See{" "}
-        <Link href="/services" style={{ color: "var(--accent)" }}>
+        <Link href="/services" className="text-ink-gold">
           Services
         </Link>{" "}
         for what I actually offer.
@@ -34,7 +34,7 @@ const FAQS: { q: string; a: React.ReactNode; open?: boolean }[] = [
     a: (
       <>
         Most projects link to a public GitHub repo on their case study page under{" "}
-        <Link href="/projects" style={{ color: "var(--accent)" }}>
+        <Link href="/projects" className="text-ink-gold">
           Projects
         </Link>
         . A few are frontend-only contributions under client NDA, clearly marked, with no code or live demo available
@@ -76,11 +76,11 @@ const FAQS: { q: string; a: React.ReactNode; open?: boolean }[] = [
       <>
         Yes — my Final Year Project became a published paper on training an mT5 model for Urdu paraphrasing, which
         later became the{" "}
-        <Link href="/projects/urdu-ibdaa" style={{ color: "var(--accent)" }}>
+        <Link href="/projects/urdu-ibdaa" className="text-ink-gold">
           Urdu Ibdaa
         </Link>{" "}
         project. Details on the{" "}
-        <Link href="/about" style={{ color: "var(--accent)" }}>
+        <Link href="/about" className="text-ink-gold">
           About
         </Link>{" "}
         page.
@@ -93,11 +93,14 @@ export default function FaqList() {
   return (
     <div data-reveal="">
       {FAQS.map((faq) => (
-        <details className="faq-item" open={faq.open} key={faq.q}>
-          <summary>
-            {faq.q} <span className="plus">+</span>
+        <details className="group border-b border-ink-line" open={faq.open} key={faq.q}>
+          <summary className="flex list-none items-center justify-between gap-5 py-6 font-display text-[1.08rem] font-bold [&::-webkit-details-marker]:hidden">
+            {faq.q}
+            <span className="flex-shrink-0 text-[1.4rem] text-ink-gold transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-open:rotate-45">
+              +
+            </span>
           </summary>
-          <p>{faq.a}</p>
+          <p className="max-w-[68ch] pb-6 text-[0.96rem] text-ink-muted">{faq.a}</p>
         </details>
       ))}
     </div>
