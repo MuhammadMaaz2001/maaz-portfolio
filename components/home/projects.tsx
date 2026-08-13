@@ -60,42 +60,58 @@ export default function Projects() {
   return (
     <section id="work">
       <div className="wrap">
-        <div className="section-head" data-reveal="">
+        <div className="mb-6 flex flex-wrap items-end justify-between gap-6" data-reveal="">
           <div>
-            <span className="section-tag">Selected Work</span>
-            <h2>Projects built to solve real problems.</h2>
+            <span className="mb-3.5 block font-body text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-ink-gold">
+              Selected Work
+            </span>
+            <h2 className="max-w-[16ch] font-display text-[clamp(1.6rem,6vw,2.6rem)] font-bold tracking-[-0.015em]">
+              Projects built to solve real problems.
+            </h2>
           </div>
-          <Link href="/projects" className="see-all">
+          <Link href="/projects" className="whitespace-nowrap pb-2 text-[0.9rem] font-semibold text-ink-gold hover:opacity-75">
             See all 9 projects →
           </Link>
         </div>
-        <p className="section-sub" data-reveal="">
+        <p className="mb-14 max-w-[56ch] text-[1.02rem] text-ink-muted" data-reveal="">
           A mix of client work, freelance builds, and personal projects — spanning dashboards, AI-powered tools,
           real-time systems, and e-commerce. Three of the nine are frontend-only contributions under client NDA,
           marked accordingly.
         </p>
 
-        <div className="project-grid">
+        <div className="grid grid-cols-1 gap-[22px] sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project) => (
-            <div className="project-card" data-reveal={project.reveal} key={project.slug}>
+            <div
+              className="overflow-hidden rounded-2xl border border-ink-line bg-ink-bg-2"
+              data-reveal={project.reveal}
+              key={project.slug}
+            >
               {project.nda ? (
-                <div className="no-media" />
+                <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-ink-bg-2 to-ink-bg-3 after:text-3xl after:opacity-35 after:content-['🔒']" />
               ) : (
-                <div className="project-media">
+                <div className="group relative aspect-[4/3] overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={project.image} alt={project.alt} />
-                  <div className="project-overlay">
-                    <span>View Case Study →</span>
-                  </div>
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.08]"
+                  />
                 </div>
               )}
-              <div className="project-info">
-                {project.nda && <div className="badge-nda">🔒 NDA — Frontend Only</div>}
-                <h3>{project.title}</h3>
-                <p>{project.desc}</p>
-                <div className="chip-row">
+              <div className="p-[22px]">
+                {project.nda && (
+                  <div className="mb-2 inline-block text-[0.7rem] font-semibold text-ink-muted">
+                    🔒 NDA — Frontend Only
+                  </div>
+                )}
+                <h3 className="mb-2 font-display text-[1.05rem] font-bold">{project.title}</h3>
+                <p className="mb-3.5 text-[0.86rem] text-ink-muted">{project.desc}</p>
+                <div className="flex flex-wrap gap-1.5">
                   {project.tech.map((t) => (
-                    <span className="chip" key={t}>
+                    <span
+                      className="rounded-full border border-ink-line px-2.5 py-1 text-[0.7rem] text-ink-muted"
+                      key={t}
+                    >
                       {t}
                     </span>
                   ))}

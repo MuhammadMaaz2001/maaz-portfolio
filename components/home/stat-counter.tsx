@@ -35,7 +35,7 @@ export default function StatCounter({ target, suffix = "" }: { target: number; s
   }, [target, suffix])
 
   return (
-    <div className="num" ref={ref}>
+    <div className="font-display text-[2.1rem] font-extrabold text-ink-gold" ref={ref}>
       0
     </div>
   )

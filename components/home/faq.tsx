@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import SectionHeading from "@/components/shared/section-heading"
 
 const FAQS = [
   {
@@ -27,25 +28,34 @@ export default function Faq() {
   return (
     <section id="faq">
       <div className="wrap">
-        <span className="section-tag" data-reveal="">
-          Questions
-        </span>
-        <h2 data-reveal="">Frequently asked.</h2>
-        <p className="section-sub" data-reveal="">
-          Straight answers to the questions recruiters and clients ask most before reaching out.
-        </p>
+        <SectionHeading
+          tag="Questions"
+          title="Frequently asked."
+          sub="Straight answers to the questions recruiters and clients ask most before reaching out."
+        />
 
-        <div className="faq-list" data-reveal="">
-          {FAQS.map((faq, i) => (
-            <div className={`faq-item${openIndex === i ? " open" : ""}`} key={faq.q}>
-              <button className="faq-q" onClick={() => setOpenIndex(openIndex === i ? -1 : i)}>
-                {faq.q} <span className="plus">+</span>
-              </button>
-              <div className="faq-a">
-                <p>{faq.a}</p>
+        <div className="max-w-[800px]" data-reveal="">
+          {FAQS.map((faq, i) => {
+            const isOpen = openIndex === i
+            return (
+              <div className="border-b border-ink-line" key={faq.q}>
+                <button
+                  className="flex w-full cursor-pointer items-center justify-between gap-5 border-none bg-none py-6 text-left font-display text-[1.05rem] font-semibold text-ink-text"
+                  onClick={() => setOpenIndex(isOpen ? -1 : i)}
+                >
+                  {faq.q}
+                  <span
+                    className={`flex-shrink-0 text-[1.4rem] text-ink-gold transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+                  >
+                    +
+                  </span>
+                </button>
+                <div className={`overflow-hidden transition-[max-height] duration-[350ms] ease-in-out ${isOpen ? "max-h-[200px]" : "max-h-0"}`}>
+                  <p className="max-w-[65ch] pb-6 text-[0.95rem] text-ink-muted">{faq.a}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

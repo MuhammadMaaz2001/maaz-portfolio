@@ -1,3 +1,5 @@
+import SectionHeading from "@/components/shared/section-heading"
+
 const STACK = [
   {
     title: "Frontend",
@@ -17,21 +19,23 @@ export default function TechStack() {
   return (
     <section id="stack">
       <div className="wrap">
-        <span className="section-tag" data-reveal="">
-          Toolbox
-        </span>
-        <h2 data-reveal="">Technologies I work with.</h2>
-        <p className="section-sub" data-reveal="">
-          The specific tools behind the capabilities above.
-        </p>
+        <SectionHeading tag="Toolbox" title="Technologies I work with." sub="The specific tools behind the capabilities above." />
 
-        <div className="stack-grid" data-reveal="1">
+        <div
+          className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink-line bg-ink-line sm:grid-cols-3"
+          data-reveal="1"
+        >
           {STACK.map((col) => (
-            <div className="stack-col" key={col.title}>
-              <h4>{col.title}</h4>
-              <div className="chip-row">
+            <div className="bg-ink-bg-2 p-7" key={col.title}>
+              <h4 className="mb-4 font-display text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-ink-gold">
+                {col.title}
+              </h4>
+              <div className="flex flex-wrap gap-1.5">
                 {col.items.map((item) => (
-                  <span className="chip" key={item}>
+                  <span
+                    className="rounded-full border border-ink-line px-2.5 py-1 text-[0.7rem] text-ink-muted"
+                    key={item}
+                  >
                     {item}
                   </span>
                 ))}

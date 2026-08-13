@@ -1,3 +1,5 @@
+import SectionHeading from "@/components/shared/section-heading"
+
 const CAPABILITIES = [
   {
     num: "01",
@@ -41,20 +43,22 @@ export default function Capabilities() {
   return (
     <section id="capabilities">
       <div className="wrap">
-        <span className="section-tag" data-reveal="">
-          What I Do
-        </span>
-        <h2 data-reveal="">End-to-end capability, across the whole stack.</h2>
-        <p className="section-sub" data-reveal="">
-          From interface to infrastructure — every layer built to work together.
-        </p>
+        <SectionHeading
+          tag="What I Do"
+          title="End-to-end capability, across the whole stack."
+          sub="From interface to infrastructure — every layer built to work together."
+        />
 
-        <div className="cap-grid">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {CAPABILITIES.map((cap) => (
-            <div className="cap-card" data-reveal={cap.reveal} key={cap.num}>
-              <span className="cap-num">{cap.num}</span>
-              <h3>{cap.title}</h3>
-              <p>{cap.desc}</p>
+            <div
+              className="rounded-2xl border border-ink-line bg-ink-bg-2 p-8 transition-[border-color,transform] duration-200 hover:-translate-y-1 hover:border-ink-gold"
+              data-reveal={cap.reveal}
+              key={cap.num}
+            >
+              <span className="mb-5 block font-display text-[0.85rem] font-bold text-ink-gold">{cap.num}</span>
+              <h3 className="mb-2.5 font-display text-[1.15rem] font-bold">{cap.title}</h3>
+              <p className="text-[0.92rem] text-ink-muted">{cap.desc}</p>
             </div>
           ))}
         </div>

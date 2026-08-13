@@ -1,3 +1,5 @@
+import SectionHeading from "@/components/shared/section-heading"
+
 const STEPS = [
   { num: "01", title: "Discover", desc: "Understand the requirements, users, and technical constraints.", reveal: "" },
   {
@@ -14,20 +16,16 @@ export default function Process() {
   return (
     <section id="process">
       <div className="wrap">
-        <span className="section-tag" data-reveal="">
-          How I Work
-        </span>
-        <h2 data-reveal="">From brief to production, in four steps.</h2>
-        <p className="section-sub" data-reveal="">
-          A predictable process — so you always know what&apos;s next.
-        </p>
+        <SectionHeading tag="How I Work" title="From brief to production, in four steps." sub="A predictable process — so you always know what's next." />
 
-        <div className="process-grid">
+        <div className="relative grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:before:absolute lg:before:left-0 lg:before:right-0 lg:before:top-[26px] lg:before:h-px lg:before:bg-ink-line lg:before:content-['']">
           {STEPS.map((step) => (
-            <div className="step" data-reveal={step.reveal} key={step.num}>
-              <div className="step-num">{step.num}</div>
-              <h3>{step.title}</h3>
-              <p>{step.desc}</p>
+            <div className="relative lg:pr-5" data-reveal={step.reveal} key={step.num}>
+              <div className="relative z-10 mb-[22px] flex h-[52px] w-[52px] items-center justify-center rounded-full border border-ink-gold bg-ink-bg-2 font-display font-bold text-ink-gold">
+                {step.num}
+              </div>
+              <h3 className="mb-2.5 font-display text-[1.05rem] font-bold">{step.title}</h3>
+              <p className="text-[0.88rem] text-ink-muted">{step.desc}</p>
             </div>
           ))}
         </div>
