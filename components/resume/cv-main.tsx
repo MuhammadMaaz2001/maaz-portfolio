@@ -66,10 +66,12 @@ const EXPERIENCE = [
 
 export default function CvMain() {
   return (
-    <div className="cv-main" data-reveal="2">
-      <section className="summary">
-        <h2>Summary</h2>
-        <p>
+    <div data-reveal="2">
+      <section className="mb-10">
+        <h2 className="mb-4 flex items-center gap-2.5 text-[1.15rem] after:h-px after:flex-1 after:bg-ink-line after:content-['']">
+          Summary
+        </h2>
+        <p className="max-w-[75ch] text-[0.95rem] text-ink-muted">
           Full Stack Developer with 2 years of experience across the MERN stack, Next.js, and FastAPI. My work has
           consistently extended past typical development — into product structuring, business process automation,
           and AI-powered interfaces. Currently at BricketX PK, where I&apos;ve taken ownership of database
@@ -80,41 +82,51 @@ export default function CvMain() {
         </p>
       </section>
 
-      <section>
-        <h2>Experience</h2>
+      <section className="mb-10">
+        <h2 className="mb-4 flex items-center gap-2.5 text-[1.15rem] after:h-px after:flex-1 after:bg-ink-line after:content-['']">
+          Experience
+        </h2>
         {EXPERIENCE.map((exp) => (
-          <div className="exp-entry" key={exp.title + exp.dates}>
-            <div className="exp-top">
-              <h3>{exp.title}</h3>
-              <span className="dates">{exp.dates}</span>
+          <div className="mb-[26px] border-b border-ink-line pb-[26px] last:mb-0 last:border-b-0 last:pb-0" key={exp.title + exp.dates}>
+            <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+              <h3 className="font-display text-[1.02rem] font-bold">{exp.title}</h3>
+              <span className="whitespace-nowrap font-mono text-[0.76rem] text-ink-muted">{exp.dates}</span>
             </div>
-            <div className="co">
+            <div className="mb-2.5 text-[0.86rem] font-semibold text-ink-gold">
               {exp.coHref ? (
-                <a href={exp.coHref} target="_blank" rel="noopener noreferrer">
+                <a href={exp.coHref} target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
                   {exp.co}
                 </a>
               ) : (
                 exp.co
               )}
             </div>
-            <ul>
+            <ul className="mb-0">
               {exp.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
+                <li className="relative mb-1.5 max-w-[70ch] pl-4 text-[0.87rem] text-ink-muted before:absolute before:left-0 before:text-ink-gold before:content-['—']" key={bullet}>
+                  {bullet}
+                </li>
               ))}
             </ul>
-            <Link href={exp.href} className="exp-more">
+            <Link href={exp.href} className="mt-1.5 inline-block text-[0.8rem] font-semibold text-ink-gold">
               Full details →
             </Link>
           </div>
         ))}
       </section>
 
-      <section>
-        <h2>Publications</h2>
-        <div className="pub-card">
-          <div className="issuer">FigShare · Final Year Project</div>
-          <h3>Training a Large Corpus Urdu Dataset for Paraphrasing on mT5 Conditional Generation</h3>
-          <p>
+      <section className="mb-10">
+        <h2 className="mb-4 flex items-center gap-2.5 text-[1.15rem] after:h-px after:flex-1 after:bg-ink-line after:content-['']">
+          Publications
+        </h2>
+        <div className="rounded-xl border border-ink-line bg-ink-bg-2 p-[20px_22px]">
+          <div className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.06em] text-ink-gold">
+            FigShare · Final Year Project
+          </div>
+          <h3 className="mb-2 font-display text-[0.98rem] font-bold">
+            Training a Large Corpus Urdu Dataset for Paraphrasing on mT5 Conditional Generation
+          </h3>
+          <p className="mb-2.5 text-[0.86rem] text-ink-muted">
             Published July 2024. Frontend built in Svelte, backend in FastAPI, with an mT5 model trained in Python —
             later became the Urdu Ibdaa project.
           </p>
@@ -122,6 +134,7 @@ export default function CvMain() {
             href="https://figshare.com/articles/preprint/Training_a_Large_Corpus_Urdu_Dataset_For_Paraphrasing_on_MT5_Conditional_Generation/26318086"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-[0.84rem] font-semibold text-ink-gold"
           >
             Read the publication →
           </a>

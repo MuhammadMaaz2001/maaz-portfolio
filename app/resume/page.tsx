@@ -53,7 +53,7 @@ export default function ResumePage() {
       <div className="wrap">
         <Breadcrumb items={[{ label: "Resume" }]} />
         <ResumeHead />
-        <div className="cv-grid">
+        <div className="grid grid-cols-1 items-start gap-12 pb-20 lg:grid-cols-[280px_1fr]">
           <CvSidebar />
           <CvMain />
         </div>
