@@ -77,7 +77,7 @@ export default function ContactPage() {
         </div>
 
         <section className="inner-section">
-          <div className="contact-grid">
+          <div className="mb-[90px] grid grid-cols-1 gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <ContactInfo />
             <ContactForm />
           </div>
@@ -100,12 +100,17 @@ export default function ContactPage() {
         </section>
 
         <section className="inner-section">
-          <div className="faq-teaser" data-reveal="">
+          <div
+            className="flex flex-wrap items-center justify-between gap-6 rounded-[20px] border border-ink-line bg-gradient-to-br from-ink-bg-2 to-ink-bg-3 p-10"
+            data-reveal=""
+          >
             <div>
-              <h2 style={{ marginBottom: 8 }}>Have a quick question first?</h2>
-              <p>Availability, rates, tech stack, remote work — most common questions are already answered.</p>
+              <h2 className="mb-2">Have a quick question first?</h2>
+              <p className="max-w-[50ch] text-ink-muted">
+                Availability, rates, tech stack, remote work — most common questions are already answered.
+              </p>
             </div>
-            <Link href="/faq" className="btn-outline">
+            <Link href="/faq" className="btn-outline inline-flex flex-shrink-0 rounded-full px-[22px] py-3 text-[0.88rem] font-semibold">
               View FAQ →
             </Link>
           </div>
