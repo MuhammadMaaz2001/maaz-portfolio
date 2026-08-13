@@ -215,67 +215,6 @@ h2 {
   opacity: 0.75;
 }
 
-/* ---------- Projects (image forward) ---------- */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-.project-card {
-  position: relative;
-  display: block;
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-}
-.project-media {
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  position: relative;
-}
-.project-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.project-card:hover .project-media img {
-  transform: scale(1.08);
-}
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, rgba(10, 10, 12, 0.92) 0%, rgba(10, 10, 12, 0.1) 55%);
-  display: flex;
-  align-items: flex-end;
-  padding: 22px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-.project-overlay span {
-  font-family: var(--f-display);
-  font-weight: 700;
-  color: var(--accent);
-  font-size: 0.9rem;
-}
-.project-info {
-  padding: 22px;
-}
-.project-info h3 {
-  font-family: var(--f-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.project-info p {
-  color: var(--muted);
-  font-size: 0.86rem;
-  margin-bottom: 14px;
-}
 .chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -416,28 +355,6 @@ h2 {
   inset: 0;
   pointer-events: none;
   background: radial-gradient(circle at 50% 45%, rgba(19, 19, 22, 0.35) 0%, rgba(19, 19, 22, 0.92) 68%);
-}
-
-/* ---------- NDA cards ---------- */
-
-.no-media {
-  aspect-ratio: 4/3;
-  background: linear-gradient(135deg, var(--bg-2), var(--bg-3));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.no-media::after {
-  content: "🔒";
-  font-size: 2rem;
-  opacity: 0.35;
-}
-.badge-nda {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 8px;
 }
 
 /* ---------- About page scoped overrides (smaller buttons/CTAs) ---------- */
@@ -660,57 +577,6 @@ h2 {
   font-size: 0.88rem;
   padding: 13px 24px;
   gap: 8px;
-}
-
-/* ---------- Projects hub page ---------- */
-.filter-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding-bottom: 44px;
-}
-.filter-pill {
-  font-family: var(--f-body);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  padding: 7px 16px;
-  border-radius: 100px;
-}
-.filter-pill.active {
-  color: #161208;
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.projects-page .project-grid {
-  padding-bottom: 100px;
-}
-.projects-page .project-card {
-  transition: border-color 0.25s ease, transform 0.25s ease;
-}
-.projects-page .project-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-}
-.badge-row {
-  margin-bottom: 10px;
-}
-.badge-featured {
-  font-family: var(--f-display);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-.projects-page .badge-nda {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 0;
-}
-.projects-page .cta-band {
-  margin-bottom: 0;
 }
 
 /* ---------- Resume page ---------- */

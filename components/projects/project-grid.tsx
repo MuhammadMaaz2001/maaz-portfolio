@@ -94,32 +94,42 @@ const PROJECTS: Project[] = [
 
 export default function ProjectGrid() {
   return (
-    <div className="project-grid">
+    <div className="grid grid-cols-1 gap-[22px] pb-[100px] sm:grid-cols-2 lg:grid-cols-3">
       {PROJECTS.map((project) => (
-        <div className="project-card" data-reveal={project.reveal} key={project.slug}>
+        <div
+          className="overflow-hidden rounded-2xl border border-ink-line bg-ink-bg-2 transition-[border-color,transform] duration-200 hover:-translate-y-1 hover:border-ink-gold"
+          data-reveal={project.reveal}
+          key={project.slug}
+        >
           {project.image ? (
-            <div className="project-media">
+            <div className="group relative aspect-[4/3] overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={project.image} alt={project.alt} />
+              <img
+                src={project.image}
+                alt={project.alt}
+                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.08]"
+              />
             </div>
           ) : (
-            <div className="no-media" />
+            <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-ink-bg-2 to-ink-bg-3 after:text-3xl after:opacity-35 after:content-['🔒']" />
           )}
-          <div className="project-info">
+          <div className="p-[22px]">
             {project.badge && (
-              <div className="badge-row">
+              <div className="mb-2.5">
                 {project.badge === "nda" ? (
-                  <span className="badge-nda">🔒 NDA — Frontend Only</span>
+                  <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-semibold text-ink-muted">
+                    🔒 NDA — Frontend Only
+                  </span>
                 ) : (
-                  <span className="badge-featured">★ Featured</span>
+                  <span className="font-display text-[0.7rem] font-bold text-ink-gold">★ Featured</span>
                 )}
               </div>
             )}
-            <h3>{project.title}</h3>
-            <p>{project.desc}</p>
-            <div className="chip-row">
+            <h3 className="mb-2 font-display text-[1.05rem] font-bold">{project.title}</h3>
+            <p className="mb-3.5 text-[0.86rem] text-ink-muted">{project.desc}</p>
+            <div className="flex flex-wrap gap-1.5">
               {project.chips.map((chip) => (
-                <span className="chip" key={chip}>
+                <span className="rounded-full border border-ink-line px-2.5 py-1 text-[0.7rem] text-ink-muted" key={chip}>
                   {chip}
                 </span>
               ))}

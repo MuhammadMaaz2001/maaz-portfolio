@@ -3,14 +3,19 @@ const FILTERS = ["All", "Dashboards", "AI Tools", "Full Stack"]
 export default function FilterRow() {
   return (
     <>
-      <div className="filter-row" data-reveal="">
+      <div className="flex flex-wrap gap-2.5 pb-11" data-reveal="">
         {FILTERS.map((filter, i) => (
-          <span className={`filter-pill${i === 0 ? " active" : ""}`} key={filter}>
+          <span
+            className={`rounded-full border px-4 py-[7px] text-[0.8rem] font-semibold ${
+              i === 0 ? "border-ink-gold bg-ink-gold text-[#161208]" : "border-ink-line text-ink-muted"
+            }`}
+            key={filter}
+          >
             {filter}
           </span>
         ))}
       </div>
-      <p style={{ color: "var(--muted)", fontSize: "0.85rem", margin: "-24px 0 40px" }}>
+      <p className="-mt-6 mb-10 text-[0.85rem] text-ink-muted">
         Filter by category, or scroll through all nine below — six public with live demos or GitHub links, three
         NDA-restricted with a written case study only.
       </p>
