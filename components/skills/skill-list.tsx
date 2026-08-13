@@ -79,22 +79,30 @@ const SKILLS: {
 
 export default function SkillList() {
   return (
-    <div className="skill-list">
+    <div className="flex flex-col gap-5">
       {SKILLS.map((skill) => (
-        <div className="skill-card" data-reveal={skill.reveal} key={skill.title}>
-          <div className="skill-head">
-            <h3>{skill.title}</h3>
-            <span className="skill-level">{skill.level}</span>
+        <div
+          className="rounded-2xl border border-ink-line bg-ink-bg-2 p-9 transition-colors duration-200 hover:border-ink-gold"
+          data-reveal={skill.reveal}
+          key={skill.title}
+        >
+          <div className="mb-3.5 flex flex-wrap items-baseline justify-between gap-4">
+            <h3 className="font-display text-[1.2rem] font-bold">{skill.title}</h3>
+            <span className="font-body text-[0.78rem] font-semibold text-ink-gold">{skill.level}</span>
           </div>
-          <p>{skill.desc}</p>
-          <div className="chip-row">
+          <p className="mb-[18px] max-w-[75ch] text-[0.94rem] text-ink-muted">{skill.desc}</p>
+          <div className="mb-4 flex flex-wrap gap-2">
             {skill.chips.map((chip) => (
-              <span className="chip" key={chip}>
+              <span className="rounded-full border border-ink-line bg-ink-bg-3 px-3.5 py-1.5 text-[0.78rem] text-ink-text" key={chip}>
                 {chip}
               </span>
             ))}
           </div>
-          {skill.links && <div className="skill-links">{skill.links}</div>}
+          {skill.links && (
+            <div className="text-[0.85rem] text-ink-muted [&_a]:font-semibold [&_a]:text-ink-gold [&_a:hover]:opacity-80">
+              {skill.links}
+            </div>
+          )}
         </div>
       ))}
     </div>
