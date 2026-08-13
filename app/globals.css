@@ -879,63 +879,6 @@ h2 {
   }
 }
 
-/* ---------- Testimonials page (dedicated card styles) ---------- */
-.testimonial-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.testimonial-card {
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 36px;
-  transition: border-color 0.25s ease, transform 0.25s ease;
-}
-.testimonial-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-3px);
-}
-.testimonial-quote {
-  font-family: var(--f-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.55;
-  margin-bottom: 22px;
-}
-.testimonial-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.testimonial-who {
-  font-size: 0.9rem;
-}
-.testimonial-who .name {
-  color: var(--accent);
-  font-weight: 600;
-}
-.testimonial-who .role {
-  color: var(--muted);
-}
-.testimonial-source {
-  font-size: 0.78rem;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  padding: 5px 12px;
-  border-radius: 100px;
-}
-.testimonial-source.verified {
-  color: var(--accent);
-  border-color: var(--accent-soft);
-  background: var(--accent-soft);
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
 /* ---------- Contact page ---------- */
 .contact-page .contact-grid {
   display: grid;

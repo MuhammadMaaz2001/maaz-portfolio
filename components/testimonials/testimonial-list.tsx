@@ -48,15 +48,28 @@ const TESTIMONIALS = [
 
 export default function TestimonialList() {
   return (
-    <div className="testimonial-list">
+    <div className="flex flex-col gap-5">
       {TESTIMONIALS.map((t) => (
-        <div className="testimonial-card" data-reveal={t.reveal} key={t.name}>
-          <p className="testimonial-quote">&quot;{t.quote}&quot;</p>
-          <div className="testimonial-footer">
-            <div className="testimonial-who">
-              <span className="name">{t.name}</span> <span className="role">· {t.role}</span>
+        <div
+          className="rounded-2xl border border-ink-line bg-ink-bg-2 p-9 transition-[border-color,transform] duration-200 hover:-translate-y-1 hover:border-ink-gold"
+          data-reveal={t.reveal}
+          key={t.name}
+        >
+          <p className="mb-[22px] font-display text-[1.15rem] font-semibold leading-[1.55]">&quot;{t.quote}&quot;</p>
+          <div className="flex flex-wrap items-center justify-between gap-2.5">
+            <div className="text-[0.9rem]">
+              <span className="font-semibold text-ink-gold">{t.name}</span>{" "}
+              <span className="text-ink-muted">· {t.role}</span>
             </div>
-            <span className={`testimonial-source${t.verified ? " verified" : ""}`}>{t.source}</span>
+            <span
+              className={`rounded-full border px-3 py-[5px] text-[0.78rem] ${
+                t.verified
+                  ? "inline-flex items-center gap-1.5 border-ink-gold-soft bg-ink-gold-soft text-ink-gold"
+                  : "border-ink-line text-ink-muted"
+              }`}
+            >
+              {t.source}
+            </span>
           </div>
         </div>
       ))}
