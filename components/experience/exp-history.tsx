@@ -64,26 +64,35 @@ export default function ExpHistory() {
       <span className="section-tag" data-reveal="">
         Full History
       </span>
-      <h2 data-reveal="" style={{ fontSize: "clamp(1.4rem, 2.6vw, 1.9rem)", marginBottom: 24 }}>
+      <h2 data-reveal="" className="mb-6 text-[clamp(1.4rem,2.6vw,1.9rem)]">
         Every role, in detail
       </h2>
 
-      <div className="exp-list">
+      <div className="flex flex-col gap-px overflow-hidden rounded-2xl border border-ink-line bg-ink-line">
         {ROLES.map((role) => (
-          <Link className="exp-row" href={`/experience/${role.slug}`} data-reveal={role.reveal} key={role.slug}>
-            <div className="exp-date">
-              {role.current && <span className="current">Current</span>}
+          <Link
+            className="grid grid-cols-1 gap-2.5 bg-ink-bg-2 p-7 transition-colors hover:bg-ink-bg-3 sm:grid-cols-[160px_1fr_auto] sm:items-center sm:gap-6"
+            href={`/experience/${role.slug}`}
+            data-reveal={role.reveal}
+            key={role.slug}
+          >
+            <div className="text-[0.82rem] font-medium text-ink-muted">
+              {role.current && (
+                <span className="mb-1.5 inline-block rounded-full bg-ink-gold-soft px-2.5 py-1 font-display text-[0.68rem] font-bold text-ink-gold">
+                  Current
+                </span>
+              )}
               {role.current && <br />}
               {role.date}
             </div>
-            <div className="exp-role">
-              <h3>{role.title}</h3>
-              <div className="co">{role.company}</div>
-              <p>{role.desc}</p>
+            <div>
+              <h3 className="mb-1 font-display text-[1.08rem] font-bold">{role.title}</h3>
+              <div className="text-[0.88rem] font-semibold text-ink-gold">{role.company}</div>
+              <p className="mt-2 max-w-[60ch] text-[0.86rem] text-ink-muted">{role.desc}</p>
             </div>
-            <div className="exp-tags">
+            <div className="flex flex-wrap justify-end gap-1.5">
               {role.tags.map((tag) => (
-                <span className="chip" key={tag}>
+                <span className="rounded-full border border-ink-line px-2.5 py-1 text-[0.7rem] text-ink-muted" key={tag}>
                   {tag}
                 </span>
               ))}
