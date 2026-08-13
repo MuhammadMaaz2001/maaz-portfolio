@@ -15,12 +15,14 @@ const CAPS = [
 
 export default function MoreCaps() {
   return (
-    <div className="more-caps" data-reveal="">
-      <span className="more-caps-label">Also available, on request</span>
-      <div className="more-caps-row">
+    <div className="rounded-2xl border border-dashed border-ink-line bg-ink-bg-2 p-7 sm:px-8" data-reveal="">
+      <span className="mb-4 block font-mono text-[0.74rem] uppercase tracking-[0.06em] text-ink-gold">
+        Also available, on request
+      </span>
+      <div className="flex flex-col gap-3">
         {CAPS.map((cap) => (
-          <span className="cap-item" key={cap.strong}>
-            <strong>{cap.strong}</strong>
+          <span className="text-[0.88rem] leading-[1.6] text-ink-muted" key={cap.strong}>
+            <strong className="text-ink-text">{cap.strong}</strong>
             {cap.rest}
           </span>
         ))}

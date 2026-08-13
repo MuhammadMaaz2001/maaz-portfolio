@@ -73,26 +73,33 @@ const AUTOMATION_SERVICES: Service[] = [
 
 function ServiceGroup({ label, services }: { label: string; services: Service[] }) {
   return (
-    <div className="group">
-      <div className="group-head" data-reveal="">
-        <span className="group-label">{label}</span>
-        <span className="group-line" />
+    <div className="pb-14">
+      <div className="mb-6 flex items-baseline gap-3.5" data-reveal="">
+        <span className="font-mono text-[0.78rem] uppercase tracking-[0.08em] text-ink-gold">{label}</span>
+        <span className="h-px flex-1 bg-ink-line" />
       </div>
-      <div className="bento-grid">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (
-          <Link className="bento-card" href={s.href} data-reveal={s.reveal} key={s.href}>
-            <div className="bento-ghost">{s.num}</div>
+          <Link
+            className="group relative flex min-h-[300px] flex-col overflow-hidden rounded-[18px] border border-ink-line bg-ink-bg-2 p-7 transition-[border-color,transform] duration-200 hover:-translate-y-1 hover:border-ink-gold"
+            href={s.href}
+            data-reveal={s.reveal}
+            key={s.href}
+          >
+            <div className="pointer-events-none absolute -top-1.5 right-2.5 font-display text-[5.5rem] font-extrabold leading-none text-ink-gold opacity-[0.06]">
+              {s.num}
+            </div>
             <MiniVisual kind={s.visual} />
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-            <div className="chip-row">
+            <h3 className="relative z-[1] mb-2.5 font-display text-[1.1rem] font-bold">{s.title}</h3>
+            <p className="relative z-[1] mb-4 flex-grow text-[0.87rem] text-ink-muted">{s.desc}</p>
+            <div className="relative z-[1] mb-3.5 flex flex-wrap gap-1.5">
               {s.chips.map((chip) => (
-                <span className="chip" key={chip}>
+                <span className="rounded-[5px] border border-ink-line px-2.5 py-1 font-mono text-[0.68rem] text-ink-muted" key={chip}>
                   {chip}
                 </span>
               ))}
             </div>
-            <span className="card-link">Learn more →</span>
+            <span className="relative z-[1] text-[0.84rem] font-semibold text-ink-gold">Learn more →</span>
           </Link>
         ))}
       </div>

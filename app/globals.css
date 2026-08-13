@@ -542,111 +542,12 @@ h2 {
   font-size: clamp(2.1rem, 4.4vw, 3rem);
 }
 
-.group {
-  padding-bottom: 56px;
-}
-.group-head {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  margin-bottom: 24px;
-}
-.group-label {
-  font-family: var(--f-mono);
-  font-size: 0.78rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.group-line {
-  flex: 1;
-  height: 1px;
-  background: var(--line);
-}
-
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.bento-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 300px;
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 28px;
-  overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease;
-}
-.bento-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-}
-.bento-ghost {
-  position: absolute;
-  top: -6px;
-  right: 10px;
-  font-family: var(--f-display);
-  font-weight: 800;
-  font-size: 5.5rem;
-  color: var(--accent);
-  opacity: 0.06;
-  line-height: 1;
-  pointer-events: none;
-}
 .mv {
   height: 56px;
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
 }
-.bento-card h3 {
-  font-family: var(--f-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
-}
-.bento-card p {
-  color: var(--muted);
-  font-size: 0.87rem;
-  margin-bottom: 16px;
-  flex-grow: 1;
-  position: relative;
-  z-index: 1;
-}
-.bento-card .chip-row {
-  margin-bottom: 14px;
-  position: relative;
-  z-index: 1;
-}
-.bento-card .chip {
-  font-family: var(--f-mono);
-  font-size: 0.68rem;
-  border-radius: 5px;
-}
-.card-link {
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: var(--accent);
-  position: relative;
-  z-index: 1;
-}
-@media (max-width: 980px) {
-  .bento-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 640px) {
-  .bento-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Mini mockup visuals */
 .mv-stack {
   display: flex;
@@ -812,35 +713,6 @@ h2 {
   border-radius: 4px;
   background: var(--bg-3);
   flex: 1;
-}
-
-.more-caps {
-  background: var(--bg-2);
-  border: 1px dashed var(--line);
-  border-radius: 16px;
-  padding: 28px 32px;
-}
-.more-caps-label {
-  font-family: var(--f-mono);
-  font-size: 0.74rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 16px;
-  display: block;
-}
-.more-caps-row {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.cap-item {
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.6;
-}
-.cap-item strong {
-  color: var(--text);
 }
 
 .services-page .cta-band {
