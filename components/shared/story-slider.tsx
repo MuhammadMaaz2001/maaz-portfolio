@@ -9,6 +9,7 @@ export type StorySlide = {
   year: string
   title: string
   desc: string
+  logo?: string
   link?: { href: string; label: string }
 }
 
@@ -50,9 +51,19 @@ export default function StorySlider({ slides, className }: { slides: StorySlide[
             <div className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 select-none whitespace-nowrap font-display text-[6rem] font-extrabold leading-none text-ink-gold opacity-[0.07] sm:text-[11rem]">
               {slide.yearBg}
             </div>
-            <span className="relative z-[1] mb-[18px] inline-block w-fit rounded-full bg-ink-gold-soft px-[13px] py-[5px] text-[0.72rem] font-bold text-ink-gold">
-              {slide.eyebrow}
-            </span>
+            <div className="relative z-[1] mb-[18px] flex items-center gap-3">
+              {slide.logo && (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  src={slide.logo}
+                  alt=""
+                  className="h-9 w-9 flex-shrink-0 rounded-lg border border-ink-line bg-white object-contain p-1"
+                />
+              )}
+              <span className="inline-block w-fit rounded-full bg-ink-gold-soft px-[13px] py-[5px] text-[0.72rem] font-bold text-ink-gold">
+                {slide.eyebrow}
+              </span>
+            </div>
             <div className="relative z-[1] mb-2 font-display text-[2.2rem] font-extrabold text-ink-gold">{slide.year}</div>
             <h3 className="relative z-[1] mb-3.5 font-display text-[1.3rem] font-bold">{slide.title}</h3>
             <p className="relative z-[1] mb-[18px] max-w-[52ch] text-[0.96rem] text-ink-muted">{slide.desc}</p>

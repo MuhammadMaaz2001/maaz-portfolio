@@ -9,7 +9,7 @@ export default function CaseSidebar({
 }: {
   navItems: { id: string; label: string }[]
   stack: string[]
-  company?: { name: string; url: string; domain: string }
+  company?: { name: string; url: string; domain: string; logo?: string }
 }) {
   const [activeId, setActiveId] = useState<string | null>(null)
 
@@ -54,9 +54,19 @@ export default function CaseSidebar({
       {company && (
         <div className="side-block">
           <span className="side-label">Company</span>
-          <a className="side-company" href={company.url} target="_blank" rel="noopener noreferrer">
-            <b>{company.name}</b>
-            {company.domain} →
+          <a className="side-company flex items-center gap-2.5" href={company.url} target="_blank" rel="noopener noreferrer">
+            {company.logo && (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                src={company.logo}
+                alt={`${company.name} logo`}
+                className="h-8 w-8 flex-shrink-0 rounded-md border border-ink-line bg-white object-contain p-1"
+              />
+            )}
+            <span>
+              <b className="block">{company.name}</b>
+              {company.domain} →
+            </span>
           </a>
         </div>
       )}

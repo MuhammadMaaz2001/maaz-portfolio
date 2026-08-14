@@ -81,10 +81,16 @@ export default function ExperiencePage() {
         <Breadcrumb items={[{ label: "Experience" }]} />
         <PageIntro />
         <MiniStats />
-        <CareerSlider />
-        <ExpHistory />
-        <Reflection />
-        <section className="inner-section" style={{ paddingBottom: 0 }}>
+        <div className="mt-16 sm:mt-24">
+          <CareerSlider />
+        </div>
+        <div className="mt-16 sm:mt-24">
+          <ExpHistory />
+        </div>
+        <div className="mt-16 sm:mt-24">
+          <Reflection />
+        </div>
+        <div className="mt-16 pb-20 sm:mt-24">
           <CtaBand
             title="Have a project in mind? Let's build it."
             description="Open to full-time roles, freelance work, and collaboration."
@@ -98,7 +104,7 @@ export default function ExperiencePage() {
               },
             ]}
           />
-        </section>
+        </div>
       </div>
     </div>
   )

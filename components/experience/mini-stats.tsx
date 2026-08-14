@@ -15,7 +15,7 @@ export default function MiniStats() {
           </div>
         ))}
       </div>
-      <p style={{ color: "var(--muted)", fontSize: "0.85rem", margin: "-40px 0 40px" }}>
+      <p className="mt-6 text-[0.85rem] text-ink-muted">
         Every role links to the specific projects built during it — where visible, you&apos;ll find the actual code
         and live demos linked from that experience page.
       </p>

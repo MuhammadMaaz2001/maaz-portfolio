@@ -78,6 +78,7 @@ export default async function ExperienceDetailPage({ params }: { params: Promise
           title={exp.title}
           company={exp.company}
           companyHref={exp.companyHref}
+          companyLogo={exp.companyLogo}
           lede={exp.lede}
         />
 
@@ -87,7 +88,7 @@ export default async function ExperienceDetailPage({ params }: { params: Promise
             stack={exp.stack}
             company={
               exp.companyHref && exp.companyDomain
-                ? { name: exp.company, url: exp.companyHref, domain: exp.companyDomain }
+                ? { name: exp.company, url: exp.companyHref, domain: exp.companyDomain, logo: exp.companyLogo }
                 : undefined
             }
           />

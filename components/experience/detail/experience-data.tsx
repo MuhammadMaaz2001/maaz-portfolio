@@ -16,6 +16,7 @@ export type ExperienceDetail = {
   company: string
   companyHref?: string
   companyDomain?: string
+  companyLogo?: string
   lede: string
   stack: string[]
   sections: CaseSection[]
@@ -39,6 +40,8 @@ export const EXPERIENCES: Record<string, ExperienceDetail> = {
     title: "Full Stack Developer (MERN | Next.js)",
     company: "BricketX PK",
     companyHref: "https://bricketx.com",
+    companyDomain: "bricketx.com",
+    companyLogo: "/images/bricketx_investments_logo.jpeg",
     lede: "Hired to build an investment portal — but joined a project with no business requirements document, no business plan, and no database. What started as a development role ended up covering product structuring, system architecture, and automation that gave the company visibility into its own investor data for the first time.",
     stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Zapier", "Webhooks", "SEO"],
     sections: [
@@ -206,6 +209,8 @@ export const EXPERIENCES: Record<string, ExperienceDetail> = {
     title: "Next.js & React Developer",
     company: "UTF-Labs",
     companyHref: "https://www.utf-labs.com/",
+    companyDomain: "utf-labs.com",
+    companyLogo: "/images/utf-labs.jpeg",
     lede: "Joined with a frontend background from React experience, but this is where I professionally learned backend development and put it to work on real, live projects — Node.js/Express APIs, MQTT integration with an embedded systems team, server management, and migrating projects across major framework versions.",
     stack: [
       "Next.js",
@@ -349,6 +354,7 @@ export const EXPERIENCES: Record<string, ExperienceDetail> = {
     typeTag: "Contract",
     title: "React Development",
     company: "BRB Group",
+    companyLogo: "/images/brb_developers_logo.jpeg",
     lede: "Led frontend development across a wide range of internal business tools — HR automation, IT management, visitor tracking, AI-driven marketing, and a company-wide file management system — collaborating cross-functionally with design and backend teams throughout.",
     stack: ["React", "WebSockets", "REST APIs", "RBAC", "Bot / Chat UI", "Data Visualization"],
     sections: [
@@ -524,6 +530,7 @@ export const EXPERIENCES: Record<string, ExperienceDetail> = {
     typeTag: "Contract · Startup",
     title: "Frontend Developer",
     company: "Neuramatics.Co.",
+    companyLogo: "/images/neuramatics.jpeg",
     lede: "An early-stage startup role that gave me hands-on, practical experience with React.js — building marketing-facing landing pages and dashboard interfaces with data visualizations, while working closely with a small, fast-moving team.",
     stack: ["React.js", "JavaScript", "Charts / Graphs", "Responsive UI"],
     sections: [
@@ -595,6 +602,7 @@ export const EXPERIENCES: Record<string, ExperienceDetail> = {
     typeTag: "Internship · Fintech",
     title: "Frontend Support Developer",
     company: "Dimensional Sys, Inc.",
+    companyLogo: "/images/dimensional_systems_logo.jpeg",
     lede: "An internship, but the first time I worked on a real, production project rather than a learning exercise. I came in knowing JavaScript and left having learned both React and Vue on the job, building fintech dashboards and helping migrate legacy code to modern frameworks.",
     stack: ["React.js", "Vue 3", "D3.js", "API Integration", "PHP (legacy)"],
     sections: [
@@ -698,6 +706,7 @@ export const EXPERIENCES: Record<string, ExperienceDetail> = {
     typeTag: "Internship · First Role",
     title: "Intern",
     company: "Coderatory",
+    companyLogo: "/images/coderatory_logo.jpeg",
     lede: "My first internship, and where I learned the fundamentals of JavaScript. This was primarily a learning-focused role, not live production work — centered on research & development, where I built my first CRUD APIs with database integration and got my first hands-on exposure to frontend development.",
     stack: ["JavaScript", "Node.js", "Express.js", "MongoDB", "HTML", "CSS", "React"],
     sections: [
