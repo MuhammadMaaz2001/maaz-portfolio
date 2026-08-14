@@ -100,12 +100,27 @@ export default function Navbar() {
           })}
         </ul>
 
-        <Link
-          href="/contact"
-          className="hidden rounded-full border border-ink-gold px-[18px] py-2.5 text-[0.85rem] font-semibold text-ink-gold transition-colors hover:bg-ink-gold hover:text-[#161208] min-[861px]:inline-block"
-        >
-          Let&apos;s Talk
-        </Link>
+        <div className="hidden items-center gap-3 min-[861px]:flex">
+          <Link
+            href="/resume"
+            className="inline-flex items-center gap-1.5 rounded-full border border-ink-line px-[18px] py-2.5 text-[0.85rem] font-semibold text-ink-text transition-colors hover:border-ink-gold hover:text-ink-gold"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6" />
+              <path d="M16 13H8" />
+              <path d="M16 17H8" />
+              <path d="M10 9H8" />
+            </svg>
+            Resume
+          </Link>
+          <Link
+            href="/contact"
+            className="rounded-full border border-ink-gold px-[18px] py-2.5 text-[0.85rem] font-semibold text-ink-gold transition-colors hover:bg-ink-gold hover:text-[#161208]"
+          >
+            Let&apos;s Talk
+          </Link>
+        </div>
 
         <button
           type="button"
@@ -177,12 +192,27 @@ export default function Navbar() {
             )
           })}
         </ul>
-        <Link
-          href="/contact"
-          className="mx-5 mb-6 mt-5 block min-h-11 rounded-full border border-ink-gold py-3.5 text-center font-semibold text-ink-gold"
-        >
-          Let&apos;s Talk
-        </Link>
+        <div className="mx-5 mb-6 mt-5 flex flex-col gap-3">
+          <Link
+            href="/resume"
+            className="flex min-h-11 items-center justify-center gap-1.5 rounded-full border border-ink-line py-3.5 text-center font-semibold text-ink-text"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6" />
+              <path d="M16 13H8" />
+              <path d="M16 17H8" />
+              <path d="M10 9H8" />
+            </svg>
+            Resume
+          </Link>
+          <Link
+            href="/contact"
+            className="block min-h-11 rounded-full border border-ink-gold py-3.5 text-center font-semibold text-ink-gold"
+          >
+            Let&apos;s Talk
+          </Link>
+        </div>
       </div>
     </header>
   )
