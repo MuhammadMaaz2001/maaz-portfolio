@@ -66,7 +66,7 @@ export default function Navbar() {
           Maaz<span className="text-ink-gold">.</span>
         </Link>
 
-        <ul className="hidden gap-[34px] text-[0.9rem] font-medium text-ink-muted min-[861px]:flex">
+        <ul className="hidden items-center gap-[34px] text-[0.9rem] font-medium text-ink-muted min-[861px]:flex">
           {NAV_ITEMS.map((item) => {
             const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
             return (
