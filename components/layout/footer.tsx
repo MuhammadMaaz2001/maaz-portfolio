@@ -10,7 +10,6 @@ const SITE_LINKS = [
 
 const MORE_LINKS = [
   { href: "/skills", label: "Skills" },
-  { href: "/blog", label: "Blog" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/faq", label: "FAQ" },
 ]
