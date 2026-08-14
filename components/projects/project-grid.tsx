@@ -7,6 +7,7 @@ type Project = {
   alt?: string
   badge?: "featured" | "nda"
   reveal: string
+  links?: { label: string; href: string }[]
 }
 
 const PROJECTS: Project[] = [
@@ -17,6 +18,10 @@ const PROJECTS: Project[] = [
     chips: ["React", "D3.js", "Recharts"],
     badge: "nda",
     reveal: "",
+    links: [
+      { label: "GitHub", href: "https://github.com/MuhammadMaaz2001/DashBoard-Meta/" },
+      { label: "Live Demo", href: "https://dash-board-meta.vercel.app/" },
+    ],
   },
   {
     slug: "urdu-ibdaa",
@@ -27,6 +32,7 @@ const PROJECTS: Project[] = [
     alt: "Urdu Ibdaa paraphrasing tool interface",
     badge: "featured",
     reveal: "1",
+    links: [{ label: "GitHub", href: "https://github.com/MuhammadMaaz2001/Urdu-Ibdaa" }],
   },
   {
     slug: "financial-advisor-ai",
@@ -35,6 +41,7 @@ const PROJECTS: Project[] = [
     chips: ["React", "Tailwind CSS"],
     badge: "nda",
     reveal: "2",
+    links: [{ label: "Live Demo", href: "https://financial-guide-ai.vercel.app/" }],
   },
   {
     slug: "konnect-it",
@@ -45,6 +52,10 @@ const PROJECTS: Project[] = [
     alt: "Konnect-It real-time chat application interface",
     badge: "featured",
     reveal: "3",
+    links: [
+      { label: "Frontend", href: "https://github.com/SunitoBoliro/konnectit-frontend" },
+      { label: "Backend", href: "https://github.com/SunitoBoliro/konnectit-backend" },
+    ],
   },
   {
     slug: "e-commerce-platform",
@@ -54,6 +65,10 @@ const PROJECTS: Project[] = [
     image: "/images/E-commerce.jpg",
     alt: "E-Commerce Platform interface",
     reveal: "4",
+    links: [
+      { label: "Frontend", href: "https://github.com/MuhammadMaaz2001/frontend-ecommerce" },
+      { label: "Backend", href: "https://github.com/MuhammadMaaz2001/backend-ecommerce" },
+    ],
   },
   {
     slug: "reddit-comment-extractor",
@@ -62,6 +77,7 @@ const PROJECTS: Project[] = [
     chips: ["Next.js", "Tailwind"],
     badge: "nda",
     reveal: "5",
+    links: [{ label: "GitHub", href: "https://github.com/Farhan5217/comment-extractor-frontend" }],
   },
   {
     slug: "url-shortener-nextjs",
@@ -71,6 +87,7 @@ const PROJECTS: Project[] = [
     image: "/images/url-short.png",
     alt: "URL Shortener interface",
     reveal: "6",
+    links: [{ label: "GitHub", href: "https://github.com/MuhammadMaaz2001/url-shortener-nextjs" }],
   },
   {
     slug: "pokemon-team-builder",
@@ -80,6 +97,10 @@ const PROJECTS: Project[] = [
     image: "/placeholder.jpg",
     alt: "Pokemon Team Builder interface",
     reveal: "7",
+    links: [
+      { label: "GitHub", href: "https://github.com/MuhammadMaaz2001/assignment-pokemon" },
+      { label: "Live Demo", href: "https://assignment-pokemon-three.vercel.app/" },
+    ],
   },
   {
     slug: "file-drive-management-system",
@@ -89,6 +110,7 @@ const PROJECTS: Project[] = [
     image: "/images/filemanagement.png",
     alt: "Drive file management system interface",
     reveal: "8",
+    links: [{ label: "GitHub", href: "https://github.com/MuhammadMaaz2001/drive_backend" }],
   },
 ]
 
@@ -134,6 +156,21 @@ export default function ProjectGrid() {
                 </span>
               ))}
             </div>
+            {project.links && project.links.length > 0 && (
+              <div className="mt-3.5 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-ink-line pt-3.5">
+                {project.links.map((link) => (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[0.8rem] font-semibold text-ink-gold hover:opacity-75"
+                    key={link.href}
+                  >
+                    {link.label} →
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       ))}
