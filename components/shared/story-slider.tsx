@@ -54,11 +54,7 @@ export default function StorySlider({ slides, className }: { slides: StorySlide[
             <div className="relative z-[1] mb-[18px] flex items-center gap-3">
               {slide.logo && (
                 /* eslint-disable-next-line @next/next/no-img-element */
-                <img
-                  src={slide.logo}
-                  alt=""
-                  className="h-9 w-9 flex-shrink-0 rounded-lg border border-ink-line bg-white object-contain p-1"
-                />
+                <img src={slide.logo} alt="" className="h-9 w-9 flex-shrink-0 rounded-lg object-contain" />
               )}
               <span className="inline-block w-fit rounded-full bg-ink-gold-soft px-[13px] py-[5px] text-[0.72rem] font-bold text-ink-gold">
                 {slide.eyebrow}

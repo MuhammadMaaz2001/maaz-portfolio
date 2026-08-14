@@ -96,7 +96,7 @@ export default function ExpHistory() {
               <img
                 src={role.logo}
                 alt={`${role.company} logo`}
-                className="h-10 w-10 flex-shrink-0 rounded-lg border border-ink-line bg-white object-contain p-1"
+                className="h-10 w-10 flex-shrink-0 rounded-lg object-contain"
               />
               <div>
                 <h3 className="mb-1 font-display text-[1.08rem] font-bold">{role.title}</h3>

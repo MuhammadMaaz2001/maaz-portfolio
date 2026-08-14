@@ -86,11 +86,6 @@ export default async function ExperienceDetailPage({ params }: { params: Promise
           <CaseSidebar
             navItems={exp.sections.map((s) => ({ id: s.id, label: String(s.title) }))}
             stack={exp.stack}
-            company={
-              exp.companyHref && exp.companyDomain
-                ? { name: exp.company, url: exp.companyHref, domain: exp.companyDomain, logo: exp.companyLogo }
-                : undefined
-            }
           />
 
           <article className="case-main">

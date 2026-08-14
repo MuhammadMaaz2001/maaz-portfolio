@@ -40,7 +40,6 @@ export const EXPERIENCES: Record<string, ExperienceDetail> = {
     title: "Full Stack Developer (MERN | Next.js)",
     company: "BricketX PK",
     companyHref: "https://bricketx.com",
-    companyDomain: "bricketx.com",
     companyLogo: "/images/bricketx_investments_logo.jpeg",
     lede: "Hired to build an investment portal — but joined a project with no business requirements document, no business plan, and no database. What started as a development role ended up covering product structuring, system architecture, and automation that gave the company visibility into its own investor data for the first time.",
     stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Zapier", "Webhooks", "SEO"],
@@ -209,7 +208,6 @@ export const EXPERIENCES: Record<string, ExperienceDetail> = {
     title: "Next.js & React Developer",
     company: "UTF-Labs",
     companyHref: "https://www.utf-labs.com/",
-    companyDomain: "utf-labs.com",
     companyLogo: "/images/utf-labs.jpeg",
     lede: "Joined with a frontend background from React experience, but this is where I professionally learned backend development and put it to work on real, live projects — Node.js/Express APIs, MQTT integration with an embedded systems team, server management, and migrating projects across major framework versions.",
     stack: [
