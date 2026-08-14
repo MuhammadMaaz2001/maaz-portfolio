@@ -98,22 +98,24 @@ export default function Navbar() {
               </li>
             )
           })}
+          <li>
+            <Link
+              href="/resume"
+              className="inline-flex items-center gap-1.5 rounded-full bg-ink-gold px-4 py-2 text-[0.8rem] font-semibold text-[#161208] transition-transform hover:-translate-y-0.5"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" />
+                <path d="M16 13H8" />
+                <path d="M16 17H8" />
+                <path d="M10 9H8" />
+              </svg>
+              Resume
+            </Link>
+          </li>
         </ul>
 
         <div className="hidden items-center gap-3 min-[861px]:flex">
-          <Link
-            href="/resume"
-            className="inline-flex items-center gap-1.5 rounded-full bg-ink-gold px-[18px] py-2.5 text-[0.85rem] font-semibold text-[#161208] transition-transform hover:-translate-y-0.5"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <path d="M14 2v6h6" />
-              <path d="M16 13H8" />
-              <path d="M16 17H8" />
-              <path d="M10 9H8" />
-            </svg>
-            Resume
-          </Link>
           <Link
             href="/contact"
             className="rounded-full border border-ink-gold px-[18px] py-2.5 text-[0.85rem] font-semibold text-ink-gold transition-colors hover:bg-ink-gold hover:text-[#161208]"
@@ -191,21 +193,23 @@ export default function Navbar() {
               </li>
             )
           })}
+          <li className="py-3">
+            <Link
+              href="/resume"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-ink-gold px-5 text-[0.9rem] font-semibold text-[#161208]"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" />
+                <path d="M16 13H8" />
+                <path d="M16 17H8" />
+                <path d="M10 9H8" />
+              </svg>
+              Resume
+            </Link>
+          </li>
         </ul>
-        <div className="mx-5 mb-6 mt-5 flex flex-col gap-3">
-          <Link
-            href="/resume"
-            className="flex min-h-11 items-center justify-center gap-1.5 rounded-full bg-ink-gold py-3.5 text-center font-semibold text-[#161208]"
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <path d="M14 2v6h6" />
-              <path d="M16 13H8" />
-              <path d="M16 17H8" />
-              <path d="M10 9H8" />
-            </svg>
-            Resume
-          </Link>
+        <div className="mx-5 mb-6 mt-5">
           <Link
             href="/contact"
             className="block min-h-11 rounded-full border border-ink-gold py-3.5 text-center font-semibold text-ink-gold"
