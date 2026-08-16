@@ -6,7 +6,8 @@ const PROJECTS = [
     title: "Meta Ads Campaign Dashboard",
     desc: "Real-time dashboard tracking Meta ad campaign performance.",
     tech: ["React", "D3.js", "Recharts"],
-    nda: true,
+    image: "/images/thumbnail.png",
+    alt: "Meta Ads Campaign Dashboard interface",
     reveal: "",
   },
   {
@@ -75,8 +76,7 @@ export default function Projects() {
         </div>
         <p className="mb-14 max-w-[56ch] text-[1.02rem] text-ink-muted" data-reveal="">
           A mix of client work, freelance builds, and personal projects — spanning dashboards, AI-powered tools,
-          real-time systems, and e-commerce. Three of the nine are frontend-only contributions under client NDA,
-          marked accordingly.
+          real-time systems, and e-commerce.
         </p>
 
         <div className="grid grid-cols-1 gap-[22px] sm:grid-cols-2 lg:grid-cols-3">
@@ -86,24 +86,15 @@ export default function Projects() {
               data-reveal={project.reveal}
               key={project.slug}
             >
-              {project.nda ? (
-                <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-ink-bg-2 to-ink-bg-3 after:text-3xl after:opacity-35 after:content-['🔒']" />
-              ) : (
-                <div className="group relative aspect-[4/3] overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={project.image}
-                    alt={project.alt}
-                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.08]"
-                  />
-                </div>
-              )}
+              <div className="group relative aspect-[4/3] overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.image}
+                  alt={project.alt}
+                  className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.08]"
+                />
+              </div>
               <div className="p-[22px]">
-                {project.nda && (
-                  <div className="mb-2 inline-block text-[0.7rem] font-semibold text-ink-muted">
-                    🔒 NDA — Frontend Only
-                  </div>
-                )}
                 <h3 className="mb-2 font-display text-[1.05rem] font-bold">{project.title}</h3>
                 <p className="mb-3.5 text-[0.86rem] text-ink-muted">{project.desc}</p>
                 <div className="flex flex-wrap gap-1.5">
