@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { toast } from "sonner"
 
 const inputClass =
   "w-full rounded-[10px] border border-ink-line bg-ink-bg-3 px-3.5 py-[13px] font-body text-[0.92rem] text-ink-text focus:border-ink-gold focus:outline-none"
@@ -39,11 +40,20 @@ export default function ContactForm() {
       if (result.success) {
         setStatus("success")
         form.reset()
+        toast.success("Message sent", {
+          description: "Thanks for reaching out — I'll reply within 24–48 hours.",
+        })
       } else {
         setStatus("error")
+        toast.error("Couldn't send your message", {
+          description: "Please try again, or email me directly instead.",
+        })
       }
     } catch {
       setStatus("error")
+      toast.error("Couldn't send your message", {
+        description: "Please try again, or email me directly instead.",
+      })
     }
   }
 
@@ -94,17 +104,6 @@ export default function ContactForm() {
         >
           {status === "loading" ? "Sending…" : "Send Message"}
         </button>
-
-        {status === "success" && (
-          <p className="mt-3.5 text-[0.85rem] font-semibold text-ink-gold">
-            Message sent — thanks for reaching out, I&apos;ll reply within 24–48 hours.
-          </p>
-        )}
-        {status === "error" && (
-          <p className="mt-3.5 text-[0.85rem] font-semibold text-red-400">
-            Something went wrong sending your message. Please try emailing me directly instead.
-          </p>
-        )}
       </form>
     </div>
   )

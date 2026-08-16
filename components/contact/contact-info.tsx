@@ -47,7 +47,12 @@ export default function ContactInfo() {
             >
               LinkedIn →
             </a>
-            <a href="#" className="rounded-full border border-ink-line px-4 py-[9px] text-[0.82rem] font-semibold hover:border-ink-gold hover:text-ink-gold">
+            <a
+              href="https://github.com/MuhammadMaaz2001"
+              className="rounded-full border border-ink-line px-4 py-[9px] text-[0.82rem] font-semibold hover:border-ink-gold hover:text-ink-gold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GitHub →
             </a>
           </div>
