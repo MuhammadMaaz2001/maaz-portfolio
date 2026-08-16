@@ -1218,6 +1218,9 @@ h2 {
   .experience-detail .side-nav {
     display: none;
   }
+  .experience-detail .side-cta {
+    flex: 1 1 100%;
+  }
 }
 
 .experience-detail .case-main {
