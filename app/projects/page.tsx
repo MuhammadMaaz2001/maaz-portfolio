@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import ScrollReveal from "@/components/home/scroll-reveal"
 import Breadcrumb from "@/components/shared/breadcrumb"
 import CtaBand from "@/components/shared/cta-band"
-import FilterRow from "@/components/projects/filter-row"
 import ProjectGrid from "@/components/projects/project-grid"
 
 export const metadata: Metadata = {
@@ -71,7 +70,6 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        <FilterRow />
         <ProjectGrid />
 
         <div className="page-head" style={{ paddingTop: 0 }}>
