@@ -104,7 +104,6 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        marquee: "marquee 26s linear infinite",
         "marquee-slow": "marquee 24s linear infinite",
         "blink-dot": "blink-dot 1.2s infinite",
         "grow-bar": "grow-bar 1.2s cubic-bezier(0.16,1,0.3,1) both",
