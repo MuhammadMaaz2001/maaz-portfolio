@@ -1,7 +1,7 @@
 const STACK = [
   { title: "Frontend", items: ["React.js", "Next.js", "Vue 3", "SvelteKit", "TypeScript"] },
   { title: "Backend", items: ["Node.js", "Express.js", "FastAPI", "Prisma"] },
-  { title: "Data & Tools", items: ["MongoDB", "PostgreSQL", "D3.js", "Git", "Jira"] },
+  { title: "Data & Tools", items: ["MongoDB", "PostgreSQL", "D3.js", "Git", "Jira", "n8n", "MQTT", "Zapier"] },
 ]
 
 export default function Tools() {
