@@ -16,7 +16,7 @@ const PROJECTS: Project[] = [
     title: "Meta Ads Campaign Dashboard",
     desc: "Real-time dashboard for Meta ad campaigns, organized by ad account with live impressions, reach, and click tracking. Built the frontend UI and data visualizations.",
     chips: ["React", "D3.js", "Recharts"],
-    image: "/images/meta_logo.jpg",
+    image: "/images/thumbnail.png",
     alt: "Meta Ads Campaign Dashboard interface",
     reveal: "",
     links: [
