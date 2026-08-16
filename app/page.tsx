@@ -13,7 +13,7 @@ import Faq from "@/components/home/faq"
 import CtaBand from "@/components/home/cta-band"
 
 export default function HomePage() {
-  return (
+  return ( 
     <>
       <ScrollReveal />
       <Hero />
