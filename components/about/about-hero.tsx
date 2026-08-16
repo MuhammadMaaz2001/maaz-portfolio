@@ -3,7 +3,7 @@ import Link from "next/link"
 const FACTS = [
   { label: "Based in", value: "Karachi, Pakistan" },
   { label: "Role", value: "Full Stack Developer" },
-  { label: "Experience", value: "2 Years" },
+  { label: "Experience", value: "2+ Years" },
   { label: "Core Stack", value: "MERN & Next.js" },
   { label: "Availability", value: "On-site / Hybrid / Remote" },
   { label: "Education", value: "BS Software Engineering" },
@@ -38,7 +38,7 @@ export default function AboutHero() {
               that just technically works.
             </p>
             <p className="mb-[18px] max-w-[60ch] text-[1rem] text-ink-muted">
-              Over the past two years I&apos;ve moved through six different roles — internships, contract work, and
+              Over the past two-plus years I&apos;ve moved through six different roles — internships, contract work, and
               now a full-time position — each one adding a different layer to how I think about software. Early on
               that meant learning backend fundamentals with Node.js and Express. Later it meant getting comfortable
               with data visualization using D3.js, and most recently it&apos;s meant taking full ownership of

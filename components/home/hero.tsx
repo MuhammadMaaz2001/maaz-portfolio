@@ -1,7 +1,7 @@
 import StatCounter from "./stat-counter"
 
 const STATS = [
-  { target: 2, suffix: "", label: "Years Experience" },
+  { target: 2, suffix: "+", label: "Years Experience" },
   { target: 15, suffix: "+", label: "Projects Shipped" },
   { target: 6, suffix: "", label: "Certifications" },
   { target: 12, suffix: "+", label: "Technologies" },

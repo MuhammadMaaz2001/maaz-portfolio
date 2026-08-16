@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const FACTS = [
   { label: "Based in", value: "Karachi, Pakistan" },
-  { label: "Experience", value: "2 Years" },
+  { label: "Experience", value: "2+ Years" },
   { label: "Education", value: "BS Software Engineering" },
   { label: "Availability", value: "On-site / Hybrid / Remote" },
 ]

@@ -1,6 +1,6 @@
 const STATS = [
   { num: "6", label: "Roles held across full-time, contract, and internship positions" },
-  { num: "2", label: "Years of combined professional experience" },
+  { num: "2+", label: "Years of combined professional experience" },
   { num: "12+", label: "Technologies used in production across those roles" },
 ]
 

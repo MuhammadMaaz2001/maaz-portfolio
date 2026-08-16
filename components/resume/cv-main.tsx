@@ -78,7 +78,7 @@ export default function CvMain() {
           Summary
         </h2>
         <p className="max-w-[75ch] text-[0.95rem] text-ink-muted">
-          Full Stack Developer with 2 years of experience across the MERN stack, Next.js, and FastAPI. My work has
+          Full Stack Developer with 2+ years of experience across the MERN stack, Next.js, and FastAPI. My work has
           consistently extended past typical development — into product structuring, business process automation,
           and AI-powered interfaces. Currently at BricketX PK, where I&apos;ve taken ownership of database
           infrastructure, automation workflows, and cross-functional project planning for an investment platform
