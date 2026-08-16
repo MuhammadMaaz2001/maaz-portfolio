@@ -6,6 +6,7 @@ const EXPERIENCE = [
     dates: "Apr 2026 — Present",
     co: "BricketX PK",
     coHref: "https://bricketx.com",
+    logo: "/images/bricketx_investments_logo.jpeg",
     bullets: [
       "Implemented Supabase as core database infrastructure after joining a project with no BRD or data model.",
       "Owned full project implementation end to end — system design, architecture, workflow planning, and development, functioning as both lead developer and project manager.",
@@ -19,6 +20,7 @@ const EXPERIENCE = [
     dates: "Oct 2025 — Apr 2026",
     co: "UTF-Labs",
     coHref: "https://www.utf-labs.com/",
+    logo: "/images/utf-labs.jpeg",
     bullets: [
       "Professionally learned backend development — built Node.js/Express APIs with MongoDB and PostgreSQL.",
       "Built MQTT-based pub/sub APIs integrating with an embedded systems team.",
@@ -31,6 +33,7 @@ const EXPERIENCE = [
     title: "React Development",
     dates: "Aug 2024 — Oct 2025",
     co: "BRB Group",
+    logo: "/images/brb_developers_logo.jpeg",
     bullets: [
       "Led frontend for payroll, document, and finance interfaces, plus HR automation (JD builder, leave-approval flow, attendance tracking).",
       "Built an IT & inventory management system with ticketing, IP tracking, live device tracking, and two AI bots (IT Assistant + Agent).",
@@ -42,6 +45,7 @@ const EXPERIENCE = [
     title: "Frontend Developer",
     dates: "Nov 2023 — Feb 2024",
     co: "Neuramatics.Co.",
+    logo: "/images/neuramatics.jpeg",
     bullets: ["Built responsive React landing pages and dashboard interfaces with charts and graphs at an early-stage startup."],
     href: "/experience/neuramatics",
   },
@@ -49,6 +53,7 @@ const EXPERIENCE = [
     title: "Frontend Support Developer",
     dates: "Aug 2023 — Nov 2023",
     co: "Dimensional Sys, Inc.",
+    logo: "/images/dimensional_systems_logo.jpeg",
     bullets: [
       "Learned React and Vue on real fintech dashboard projects centered on stock-market data.",
       "Migrated a legacy PHP project to Vue and upgraded an existing Vue project to a newer version.",
@@ -59,6 +64,7 @@ const EXPERIENCE = [
     title: "Intern",
     dates: "Feb 2022 — Apr 2022",
     co: "Coderatory",
+    logo: "/images/coderatory_logo.jpeg",
     bullets: ["First internship — learned JavaScript fundamentals, built first CRUD APIs with MongoDB, and got early exposure to HTML/CSS/React."],
     href: "/experience/coderatory",
   },
@@ -67,7 +73,7 @@ const EXPERIENCE = [
 export default function CvMain() {
   return (
     <div data-reveal="2">
-      <section className="mb-10">
+      <div className="mb-10">
         <h2 className="mb-4 flex items-center gap-2.5 text-[1.15rem] after:h-px after:flex-1 after:bg-ink-line after:content-['']">
           Summary
         </h2>
@@ -80,9 +86,9 @@ export default function CvMain() {
           Final Year Project, and hands-on experience across React, Vue, Node.js, and Python backends. Karachi-based,
           open to full-time, hybrid, or remote roles.
         </p>
-      </section>
+      </div>
 
-      <section className="mb-10">
+      <div className="mb-10">
         <h2 className="mb-4 flex items-center gap-2.5 text-[1.15rem] after:h-px after:flex-1 after:bg-ink-line after:content-['']">
           Experience
         </h2>
@@ -92,14 +98,20 @@ export default function CvMain() {
               <h3 className="font-display text-[1.02rem] font-bold">{exp.title}</h3>
               <span className="whitespace-nowrap font-mono text-[0.76rem] text-ink-muted">{exp.dates}</span>
             </div>
-            <div className="mb-2.5 text-[0.86rem] font-semibold text-ink-gold">
-              {exp.coHref ? (
-                <a href={exp.coHref} target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
-                  {exp.co}
-                </a>
-              ) : (
-                exp.co
+            <div className="mb-2.5 flex items-center gap-2">
+              {exp.logo && (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img src={exp.logo} alt={`${exp.co} logo`} className="h-6 w-6 flex-shrink-0 rounded object-contain" />
               )}
+              <span className="text-[0.86rem] font-semibold text-ink-gold">
+                {exp.coHref ? (
+                  <a href={exp.coHref} target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+                    {exp.co}
+                  </a>
+                ) : (
+                  exp.co
+                )}
+              </span>
             </div>
             <ul className="mb-0">
               {exp.bullets.map((bullet) => (
@@ -113,9 +125,9 @@ export default function CvMain() {
             </Link>
           </div>
         ))}
-      </section>
+      </div>
 
-      <section className="mb-10">
+      <div className="mb-10">
         <h2 className="mb-4 flex items-center gap-2.5 text-[1.15rem] after:h-px after:flex-1 after:bg-ink-line after:content-['']">
           Publications
         </h2>
@@ -139,7 +151,7 @@ export default function CvMain() {
             Read the publication →
           </a>
         </div>
-      </section>
+      </div>
     </div>
   )
 }

@@ -4,7 +4,7 @@ const SKILL_GROUPS = [
   { title: "Database", chips: ["MongoDB", "PostgreSQL", "Supabase", "Prisma"] },
   { title: "Data Viz", chips: ["D3.js", "Recharts"] },
   { title: "Automation", chips: ["Zapier", "n8n", "Webhooks"] },
-  { title: "Tools", chips: ["Git", "JIRA", "Agile"] },
+  { title: "Tools", chips: ["Git", "JIRA", "Agile", "MQTT"] },
 ]
 
 const EDUCATION = [
