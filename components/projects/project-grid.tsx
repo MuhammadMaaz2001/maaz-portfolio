@@ -145,7 +145,7 @@ export default function ProjectGrid() {
                   <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-semibold text-ink-muted">
                     🔒 NDA — Frontend Only
                   </span>
-                ) : ( 
+                ) : (
                   <span className="font-display text-[0.7rem] font-bold text-ink-gold">★ Featured</span>
                 )}
               </div>
