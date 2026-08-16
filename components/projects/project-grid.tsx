@@ -14,9 +14,10 @@ const PROJECTS: Project[] = [
   {
     slug: "meta-ads-campaign-dashboard",
     title: "Meta Ads Campaign Dashboard",
-    desc: "Real-time dashboard for Meta ad campaigns, organized by ad account with live impressions, reach, and click tracking. I built the frontend UI and data visualizations; backend confidential under client NDA.",
+    desc: "Real-time dashboard for Meta ad campaigns, organized by ad account with live impressions, reach, and click tracking. Built the frontend UI and data visualizations.",
     chips: ["React", "D3.js", "Recharts"],
-    badge: "nda",
+    image: "/images/meta_logo.jpg",
+    alt: "Meta Ads Campaign Dashboard interface",
     reveal: "",
     links: [
       { label: "GitHub", href: "https://github.com/MuhammadMaaz2001/DashBoard-Meta/" },
@@ -37,9 +38,10 @@ const PROJECTS: Project[] = [
   {
     slug: "financial-advisor-ai",
     title: "Financial Advisor",
-    desc: "AI-powered app offering personalized financial advice based on user input. I built the frontend UI; backend and AI logic confidential under client NDA.",
+    desc: "AI-powered app offering personalized financial advice based on user input, with a chat-based strategy assistant.",
     chips: ["React", "Tailwind CSS"],
-    badge: "nda",
+    image: "/images/financial.png",
+    alt: "Financial Advisor AI interface",
     reveal: "2",
     links: [{ label: "Live Demo", href: "https://financial-guide-ai.vercel.app/" }],
   },
@@ -73,9 +75,10 @@ const PROJECTS: Project[] = [
   {
     slug: "reddit-comment-extractor",
     title: "Reddit Comment Extractor",
-    desc: "Fetches and displays nested comment threads from a Reddit post URL for research and content review. I built the frontend; extraction logic confidential under client NDA.",
+    desc: "Fetches and displays nested comment threads from a Reddit post URL for research and content review.",
     chips: ["Next.js", "Tailwind"],
-    badge: "nda",
+    image: "/images/reddit.png",
+    alt: "Reddit Comment Extractor interface",
     reveal: "5",
     links: [{ label: "GitHub", href: "https://github.com/Farhan5217/comment-extractor-frontend" }],
   },

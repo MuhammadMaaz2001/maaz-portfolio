@@ -58,15 +58,13 @@ export default function ProjectsPage() {
           <h1 data-reveal="">Projects built to solve real problems.</h1>
           <p className="page-sub" data-reveal="1">
             Full-stack builds across React, Next.js, Node.js, FastAPI, and MongoDB — dashboards, AI tools, and
-            real-time applications. Three are frontend-only contributions under client NDA, marked below.
+            real-time applications.
           </p>
           <p className="page-sub" data-reveal="2">
             Each of these started as a real problem rather than a tutorial exercise — a client needing visibility
             into ad spend, a team needing a faster way to review Reddit threads, or simply my own curiosity about how
-            a particular system works under the hood. Where I had full ownership, the case study covers the whole
-            build: problem, architecture, and outcome. Where I contributed frontend only under an NDA, that&apos;s
-            stated plainly rather than implied otherwise. Every case study links back to the role it was built
-            during, so you can see the full context — not just the finished screenshot.
+            a particular system works under the hood. Every project links to its GitHub repo and, where available, a
+            live demo — not just a finished screenshot.
           </p>
         </div>
 
